@@ -1,0 +1,127 @@
+INFO    2016-06-12 20:23:54,333  - Logger Started
+INFO    2016-06-12 20:23:54,339  - Config file loaded Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Files\Config.property
+INFO    2016-06-12 20:23:55,444  - Extent report started at path Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Report.html
+INFO    2016-06-12 20:23:57,333  - 
+INFO    2016-06-12 20:23:57,333  - $$$$$$ MODULE UNDER EXECUTION [Mod_02]
+INFO    2016-06-12 20:23:57,344  - Extent reporter test started [Mod_02_TC_03]  Disscription [Description - Mod_02_TC_03]
+INFO    2016-06-12 20:23:57,344  - Authour Assigned
+INFO    2016-06-12 20:23:57,345  - Moudle is assigne Mod_02
+INFO    2016-06-12 20:23:57,345  -                         EXECUTING TEST CASE [Mod_02_TC_03]
+INFO    2016-06-12 20:23:57,345  - ------------------------------------------------------------------
+INFO    2016-06-12 20:23:57,345  -                         ITERATION MODE: [Run one iteration only]
+INFO    2016-06-12 20:23:57,346  - ------------------------------------------------------------------
+INFO    2016-06-12 20:23:57,349  - Data Row pointer at 13 ,Testcases is Mod_02_TC_03 , itration is 1
+INFO    2016-06-12 20:23:57,350  - ------------------------------------------------------------------
+INFO    2016-06-12 20:23:57,350  -                         [1] ITERATION STARTED
+INFO    2016-06-12 20:23:57,350  - ------------------------------------------------------------------
+INFO    2016-06-12 20:23:57,351  - Master test data Row 13
+INFO    2016-06-12 20:23:57,351  - -1- TEST_DATA_ROW 13   , TEST_CASE Mod_02_TC_03, ITERATION 1
+INFO    2016-06-12 20:23:57,351  - Child Test started [LaunchBrowser]
+INFO    2016-06-12 20:23:57,354  - get_TestData param key Browser_Name discovered at col 3
+INFO    2016-06-12 20:23:57,355  - Browser_Name is(CommonData) firefox
+INFO    2016-06-12 20:24:12,843  - firefox Browser launched
+INFO    2016-06-12 20:24:12,845  - info - [STEP:] Launch Browser,      [DETAILS:] firefox is launched with all desired capabilities
+INFO    2016-06-12 20:24:12,901  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6fa34d52]
+INFO    2016-06-12 20:24:12,901  - ------------------------------------------------------------------
+INFO    2016-06-12 20:24:12,902  - Master test data Row 13
+INFO    2016-06-12 20:24:12,902  - -1- TEST_DATA_ROW 13   , TEST_CASE Mod_02_TC_03, ITERATION 1
+INFO    2016-06-12 20:24:12,902  - Child Test started [LaunchApp]
+INFO    2016-06-12 20:24:12,903  - get_TestData param key App_URL discovered at col 4
+INFO    2016-06-12 20:24:12,903  - App_URL is https://www.google.co.in/
+INFO    2016-06-12 20:24:16,260  - Child test appended [com.relevantcodes.extentreports.ExtentTest@78aa1f72]
+INFO    2016-06-12 20:24:16,260  - ------------------------------------------------------------------
+INFO    2016-06-12 20:24:16,261  - Master test data Row 13
+INFO    2016-06-12 20:24:16,261  - -1- TEST_DATA_ROW 13   , TEST_CASE Mod_02_TC_03, ITERATION 1
+INFO    2016-06-12 20:24:16,261  - Child Test started [OpenGnewsPage]
+INFO    2016-06-12 20:24:30,772  - Child test appended [com.relevantcodes.extentreports.ExtentTest@2931522b]
+INFO    2016-06-12 20:24:30,772  - ------------------------------------------------------------------
+INFO    2016-06-12 20:24:30,772  - Master test data Row 13
+INFO    2016-06-12 20:24:30,772  - -1- TEST_DATA_ROW 13   , TEST_CASE Mod_02_TC_03, ITERATION 1
+INFO    2016-06-12 20:24:30,772  - Child Test started [print_news1]
+ERROR   2016-06-12 20:24:32,853  - [STEP:] print_news1could not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@19e7a160<img class='report-img' data-featherlight='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_24_30_IST_2016.png' src='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_24_30_IST_2016.png' />
+INFO    2016-06-12 20:24:32,853  - Child test appended [com.relevantcodes.extentreports.ExtentTest@45a4b042]
+INFO    2016-06-12 20:24:32,853  - ------------------------------------------------------------------
+INFO    2016-06-12 20:24:32,854  - Master test data Row 13
+INFO    2016-06-12 20:24:32,854  - -1- TEST_DATA_ROW 13   , TEST_CASE Mod_02_TC_03, ITERATION 1
+INFO    2016-06-12 20:24:32,854  - Child Test started [click_Gplay]
+INFO    2016-06-12 20:24:55,920  - set_TestData param key putHere discovered at col 8
+INFO    2016-06-12 20:24:55,927  - putHere is set to value gplay clicked
+INFO    2016-06-12 20:24:55,928  - info - [STEP:] set_TestData [putHere],      [DETAILS:] Is set to [gplay clicked]
+INFO    2016-06-12 20:24:55,928  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5717c37]
+INFO    2016-06-12 20:24:55,928  - ------------------------------------------------------------------
+INFO    2016-06-12 20:24:55,929  - Master test data Row 13
+INFO    2016-06-12 20:24:55,929  - -1- TEST_DATA_ROW 13   , TEST_CASE Mod_02_TC_03, ITERATION 1
+INFO    2016-06-12 20:24:55,929  - Child Test started [Select_Click_gPlaySection]
+INFO    2016-06-12 20:24:55,929  - get_TestData param key gApp_section discovered at col 6
+INFO    2016-06-12 20:24:55,929  - gApp_section is Books
+ERROR   2016-06-12 20:25:00,209  - [STEP:] Select_Click_gPlaySectioncould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@4816278d<img class='report-img' data-featherlight='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_24_55_IST_2016.png' src='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_24_55_IST_2016.png' />
+INFO    2016-06-12 20:25:00,209  - Child test appended [com.relevantcodes.extentreports.ExtentTest@40317ba2]
+INFO    2016-06-12 20:25:00,209  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:00,209  - Master test data Row 13
+INFO    2016-06-12 20:25:00,209  - -1- TEST_DATA_ROW 13   , TEST_CASE Mod_02_TC_03, ITERATION 1
+INFO    2016-06-12 20:25:00,209  - Child Test started [QuitApp]
+INFO    2016-06-12 20:25:03,038  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-12 20:25:03,039  - Child test appended [com.relevantcodes.extentreports.ExtentTest@38b27cdc]
+INFO    2016-06-12 20:25:03,039  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,039  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,039  -                         [1] ITERATION COMPLETED
+INFO    2016-06-12 20:25:03,039  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,039  -                         COMPLETED TEST CASE [Mod_02_TC_03]
+INFO    2016-06-12 20:25:03,039  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,042  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@7164ca4c
+INFO    2016-06-12 20:25:03,043  - Extent reporter test started [Mod_02_TC_04]  Disscription [Description - Mod_02_TC_04]
+INFO    2016-06-12 20:25:03,043  - Authour Assigned
+INFO    2016-06-12 20:25:03,043  - Moudle is assigne Mod_02
+INFO    2016-06-12 20:25:03,043  -                         EXECUTING TEST CASE [Mod_02_TC_04]
+INFO    2016-06-12 20:25:03,044  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,044  -                         ITERATION MODE: [Run one iteration only]
+INFO    2016-06-12 20:25:03,044  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,045  - Data Row pointer at 14 ,Testcases is Mod_02_TC_04 , itration is 1
+INFO    2016-06-12 20:25:03,045  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,045  -                         [1] ITERATION STARTED
+INFO    2016-06-12 20:25:03,045  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:03,045  - Master test data Row 14
+INFO    2016-06-12 20:25:03,046  - -1- TEST_DATA_ROW 14   , TEST_CASE Mod_02_TC_04, ITERATION 1
+INFO    2016-06-12 20:25:03,046  - Child Test started [LaunchBrowser]
+INFO    2016-06-12 20:25:03,046  - get_TestData param key Browser_Name discovered at col 3
+INFO    2016-06-12 20:25:03,046  - Browser_Name is(CommonData) firefox
+INFO    2016-06-12 20:25:19,645  - firefox Browser launched
+INFO    2016-06-12 20:25:19,645  - info - [STEP:] Launch Browser,      [DETAILS:] firefox is launched with all desired capabilities
+INFO    2016-06-12 20:25:19,646  - Child test appended [com.relevantcodes.extentreports.ExtentTest@172b013]
+INFO    2016-06-12 20:25:19,646  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:19,646  - Master test data Row 14
+INFO    2016-06-12 20:25:19,646  - -1- TEST_DATA_ROW 14   , TEST_CASE Mod_02_TC_04, ITERATION 1
+INFO    2016-06-12 20:25:19,646  - Child Test started [LaunchApp]
+INFO    2016-06-12 20:25:19,647  - get_TestData param key App_URL discovered at col 4
+INFO    2016-06-12 20:25:19,647  - App_URL is https://www.google.co.in/
+INFO    2016-06-12 20:25:24,778  - Child test appended [com.relevantcodes.extentreports.ExtentTest@1fa1cab1]
+INFO    2016-06-12 20:25:24,778  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:24,779  - Master test data Row 14
+INFO    2016-06-12 20:25:24,779  - -1- TEST_DATA_ROW 14   , TEST_CASE Mod_02_TC_04, ITERATION 1
+INFO    2016-06-12 20:25:24,779  - Child Test started [SelectGapp]
+INFO    2016-06-12 20:25:24,779  - get_TestData param key AppName discovered at col 5
+INFO    2016-06-12 20:25:24,779  - AppName is News
+ERROR   2016-06-12 20:25:24,931  - [STEP:] SelectGappcould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@62010f5c<img class='report-img' data-featherlight='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_25_24_IST_2016.png' src='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_25_24_IST_2016.png' />
+INFO    2016-06-12 20:25:24,931  - Child test appended [com.relevantcodes.extentreports.ExtentTest@401f7633]
+INFO    2016-06-12 20:25:24,931  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:24,931  - Master test data Row 14
+INFO    2016-06-12 20:25:24,931  - -1- TEST_DATA_ROW 14   , TEST_CASE Mod_02_TC_04, ITERATION 1
+INFO    2016-06-12 20:25:24,932  - Child Test started [print_news]
+ERROR   2016-06-12 20:25:25,098  - [STEP:] print_newscould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@5b6ec132<img class='report-img' data-featherlight='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_25_24_IST_2016.png' src='file:///Z:\Softwares\Testing\Eclips_WS\BPS Hybrid Framework\Results\Run_Sun_Jun_12_20_23_54_IST_2016\Screenshots\Sun_Jun_12_20_25_24_IST_2016.png' />
+INFO    2016-06-12 20:25:25,099  - Child test appended [com.relevantcodes.extentreports.ExtentTest@67d18ed7]
+INFO    2016-06-12 20:25:25,099  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:25,099  - Master test data Row 14
+INFO    2016-06-12 20:25:25,099  - -1- TEST_DATA_ROW 14   , TEST_CASE Mod_02_TC_04, ITERATION 1
+INFO    2016-06-12 20:25:25,099  - Child Test started [QuitApp]
+INFO    2016-06-12 20:25:27,168  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-12 20:25:27,168  - Child test appended [com.relevantcodes.extentreports.ExtentTest@7b205dbd]
+INFO    2016-06-12 20:25:27,169  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:27,169  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:27,169  -                         [1] ITERATION COMPLETED
+INFO    2016-06-12 20:25:27,169  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:27,169  -                         COMPLETED TEST CASE [Mod_02_TC_04]
+INFO    2016-06-12 20:25:27,169  - ------------------------------------------------------------------
+INFO    2016-06-12 20:25:27,169  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@106cc338
+INFO    2016-06-12 20:25:27,170  - Mod_02 , Execution done for this module--------------------------------------
+INFO    2016-06-12 20:25:27,769  - Report FLUSHED !!!!
+INFO    2016-06-12 20:25:27,769  - %%%%%%%%%%%%%     All applicable Modules are executed       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
