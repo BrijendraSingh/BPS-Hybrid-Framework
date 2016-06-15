@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 import com.relevantcodes.extentreports.ExtentTest;
 
 import businessComponents.Keywords;
+import freemarker.log.Logger;
 
 
 public class ExcelUtil {
@@ -76,9 +77,7 @@ public class ExcelUtil {
 				Reporter.endTest();
 			}
 		}
-		LogFW.log(currentSheet.getSheetName() +  " , Execution done for this module--------------------------------------");
-		//System.out.println( currentSheet.getSheetName() +  " , Execution done for this module--------------------------------------");
-		//System.out.println();
+		LogFW.log("@@Module {" + currentSheet.getSheetName() + "} Execution Completed");
 	}
 	
 	public static boolean setIterationRow(){
@@ -87,7 +86,7 @@ public class ExcelUtil {
 		for (int sb=1; sb<=intUsedRow; sb++){
 			if (dataSheet.getRow(sb).getCell(0).toString().equalsIgnoreCase(testCaseName) && dataSheet.getRow(sb).getCell(1).getNumericCellValue()==currentIteration){
 				//System.out.println("Data Row pointer at " + sb + " ,Testcases is " + testCaseName + " , itration is " + currentIteration);
-				LogFW.log("Data Row pointer at " + sb + " ,Testcases is " + testCaseName + " , itration is " + currentIteration);
+				LogFW.log("Test Data Row is Pointing at {" + sb + "} ,TESTCASE {" + testCaseName + "} , ITERATION {" + currentIteration + "}");
 				IterationCrntRow_TestData=sb;
 				flag=true;
 				break;
@@ -99,7 +98,7 @@ public class ExcelUtil {
 
 	public static void executeTestCase(){
 		
-		LogFW.log("                        EXECUTING TEST CASE [" + testCaseName +"]");
+		LogFW.log("TEST CASE under Execution [" + testCaseName +"]");
 		
 		//-----------------------
 		readIteration();
@@ -113,9 +112,9 @@ public class ExcelUtil {
 			//logic to validate incorrect iteration row
 			if(!dataSheet.getRow(IterationCrntRow_TestData).getCell(0).toString().equalsIgnoreCase(testCaseName)){
 				if (iterationMode.equalsIgnoreCase("Run from <Start Iteration> to <End Iteration>") || currentIteration==1){
-					LogFW.log("Iteration started " + currentIteration);
+					LogFW.log("Iteration started (" + currentIteration + ")");
 					LogFW.warning("No test data found for this test case iteration ! All subsequent iterations aborted");
-					LogFW.log("Iteration Completed " + currentIteration);
+					LogFW.log("Iteration Completed (" + currentIteration + ")");
 				}
 				break;
 			}
@@ -126,14 +125,12 @@ public class ExcelUtil {
 					LogFW.warning("ITERATION COMPLETED - NO TEST DATA ROW AVAILABLE");
 					break;
 				}else{
-					LogFW.warning("Test data not found for Iteration " + currentIteration + " , ! All subsequent iterations aborted");
+					LogFW.warning("Test Data row not found for Iteration {" + currentIteration + "} , ! All subsequent iterations aborted");
 					break;
 				}
 			}
 			
-			LogFW.log("------------------------------------------------------------------");
-			LogFW.log("                        [" + currentIteration + "] ITERATION STARTED");
-			LogFW.log("------------------------------------------------------------------");
+			LogFW.log(" ITERATION STARTED [" + currentIteration + "]");
 
 			//run loop for available keywords
 			keywordCount=keywordRow.getLastCellNum()-6;
@@ -151,8 +148,8 @@ public class ExcelUtil {
 							groupedKeywords.add(strCurrentKeyword);
 							intMasterTDRow=IterationCrntRow_TestData;
 							
-							LogFW.log("Master test data Row " + intMasterTDRow);
-							LogFW.log("-1- TEST_DATA_ROW " + IterationCrntRow_TestData + "   , TEST_CASE " + testCaseName + ", ITERATION " + currentIteration  );
+							//LogFW.log("Master test data Row " + intMasterTDRow);
+							LogFW.log("!1 -TEST_DATA_ROW {" + IterationCrntRow_TestData + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration +"}"  );
 					
 							//EXECUTION OF NON SUB ITERATION KEYWORDS
 							for (String subg: groupedKeywords){
@@ -160,7 +157,6 @@ public class ExcelUtil {
 								executeKeyword(subg);
 							}
 							
-							LogFW.log("------------------------------------------------------------------");
 							groupedKeywords.clear();
 							
 						//SUB ITERATION KEYWORDS, 	WITH [,]	
@@ -181,7 +177,7 @@ public class ExcelUtil {
 									intMasterTDRow=subIt;
 									
 									LogFW.log("Master test data Row " + intMasterTDRow);
-									LogFW.log("-2- TEST_DATA_ROW " + subIt + "   , TEST_CASE " + testCaseName + ", ITERATION " + currentIteration + ", SUBITERATION " + groupIndex );
+									LogFW.log("!2 -TEST_DATA_ROW {" + subIt + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration + "}, SUBITERATION {" + groupIndex +"}" );
 								
 									for (String subg: groupedKeywords){
 										//LogFW.log(subg);
@@ -190,19 +186,19 @@ public class ExcelUtil {
 									groupIndex=groupIndex+1;
 								}
 								groupedKeywords.clear();
-								LogFW.log("------------------------------------------------------------------");
+								//LogFW.log("------------------------------------------------------------------");
 							}
 						}										
 					}else{
-						LogFW.log("------------------------------------------------------------------");
+						//LogFW.log("------------------------------------------------------------------");
 						break;
 					}
 				}
-			LogFW.log("                        [" + currentIteration + "] ITERATION COMPLETED");
-			LogFW.log("------------------------------------------------------------------");
+			LogFW.log("ITERATION COMPLETED [" + currentIteration + "] ");
+			//LogFW.log("------------------------------------------------------------------");
 			currentIteration=currentIteration+1;  			
 		}
-		LogFW.log("                        COMPLETED TEST CASE [" + testCaseName +"]");
+		LogFW.log("TEST CASE EXECUTION COMPLETED [" + testCaseName +"]");
 		LogFW.log("------------------------------------------------------------------");
 	}
 	
@@ -210,8 +206,8 @@ public class ExcelUtil {
 		iterationMode=keywordRow.getCell(3).toString();
 		//System.out.println();
 		//System.out.println("@@@@@@@@@@@@----------Iteration Mode is: " + iterationMode);
-		LogFW.log("------------------------------------------------------------------");
-		LogFW.log("                        ITERATION MODE: [" + iterationMode + "]");
+		//LogFW.log("------------------------------------------------------------------");
+		LogFW.log("ITERATION MODE: [" + iterationMode + "]");
 		if (iterationMode.equalsIgnoreCase("Run one iteration only")){
 			startIteration=1; 
 			endIteration=1;
@@ -234,7 +230,7 @@ public class ExcelUtil {
 			}else{
 				endIteration=(int)keywordRow.getCell(5).getNumericCellValue(); 
 			}
-			LogFW.log("                        Start_Iteration- " + startIteration + "  End_Iterattion-" + endIteration);
+			LogFW.log("Start_Iteration [" + startIteration + "]  !! End_Iterattion [" + endIteration +"]");
 			//System.out.println("Start iteration: " + startIteration + " , End iterattion is: " + endIteration);
 			
 			currentIteration=startIteration;
@@ -245,7 +241,7 @@ public class ExcelUtil {
 			endIteration=1;
 			currentIteration=1;
 		}
-		LogFW.log("------------------------------------------------------------------");
+		//LogFW.log("------------------------------------------------------------------");
 	}
 	
 
@@ -298,10 +294,8 @@ public class ExcelUtil {
 					//break;
 				}
 			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				System.out.println("Problem execution/Invoking the Keyword " + keyword + ", Casue - " + e.getCause()+ " , Message: " + e.getStackTrace());
+				LogFW.log("Problem execution/Invoking the Keyword " + keyword + ", Casue - " + e.getCause()+ " , Message: " + e.getStackTrace());
 				Reporter.logFATAL(keyword + "could not be executed ", e.getCause() + " | " + e.getStackTrace());
-				//framework_ReportClass.logUNKNOWN("Problem execution/Invoking the Keyword " + keyword , ", Casue - " + e.getCause() + " | Message- "+ e.getMessage());
-				//framework_logFileOperations.logThis("Problem execution/Invoking the Keyword", keyword, e.getMessage());
 			}
 		}
 		Reporter.Append_ChildTest(ChildTest);
@@ -327,7 +321,7 @@ public class ExcelUtil {
 			if (dataSheet.getRow(0).getCell(ic).toString().equalsIgnoreCase(paramname)){
 				intparamCol=ic;
 				paramFlag=true;
-				LogFW.log("get_TestData param key " + paramname + " discovered at col " + intparamCol);
+				LogFW.log("get_TestData (" + paramname + ") discovered at col: " + intparamCol);
 				break;
 			}
 		}
@@ -355,7 +349,7 @@ public class ExcelUtil {
 							if (CDSheet.getRow(0).getCell(loopC).toString().equalsIgnoreCase(paramname)){
 								paramvalue=CDSheet.getRow(loopR).getCell(loopC).toString();
 								//System.out.println(key + " is(CommonData) " + keyVal);
-								LogFW.log(paramname + " is(CommonData) " + paramvalue);
+								LogFW.log("{" + paramname + "} (CommonData) Value: " + paramvalue);
 								cmnFlag=true;
 								break;
 							}
@@ -367,7 +361,7 @@ public class ExcelUtil {
 				}
 			}else{
 				paramvalue=keyVal;
-				LogFW.log(paramname + " is " + paramvalue);
+				LogFW.log("{"+paramname + "} Value: " + paramvalue);
 			}
 			
 		}else{
