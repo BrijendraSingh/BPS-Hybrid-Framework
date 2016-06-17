@@ -21,7 +21,7 @@ static WebDriver driver;
 		
 		//@ Chrom Browser setup
 		if(typeBrowser.equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 			
 		//@ Firefox Browser Setup - "mozila"	
@@ -36,7 +36,7 @@ static WebDriver driver;
 			
 		//@ Internet Explorer Setup	
 		}else if (typeBrowser.equalsIgnoreCase("ie")){
-			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"Drivers\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\Drivers\\IEDriverServer.exe");
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			driver = new InternetExplorerDriver(cap);

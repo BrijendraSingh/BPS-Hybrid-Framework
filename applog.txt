@@ -1,95 +1,65 @@
-INFO    2016-06-15 21:24:02,046  - Logger Started
-INFO    2016-06-15 21:24:02,058  - Config file loaded C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Files\Config.property
-INFO    2016-06-15 21:24:03,870  - Extent report started at path C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Report.html
-INFO    2016-06-15 21:24:06,372  - 
-INFO    2016-06-15 21:24:06,372  - $$$$$$ MODULE UNDER EXECUTION [Mod_02]
-INFO    2016-06-15 21:24:06,382  - Extent reporter test started [Mod_02_TC_03]  Disscription [Description - Mod_02_TC_03]
-INFO    2016-06-15 21:24:06,383  - Authour Assigned
-INFO    2016-06-15 21:24:06,383  - Moudle is assigne Mod_02
-INFO    2016-06-15 21:24:06,383  - TEST CASE under Execution [Mod_02_TC_03]
-INFO    2016-06-15 21:24:06,384  - ITERATION MODE: [Run one iteration only]
-INFO    2016-06-15 21:24:06,387  - Test Data Row is Pointing at {13} ,TESTCASE {Mod_02_TC_03} , ITERATION {1}
-INFO    2016-06-15 21:24:06,387  -  ITERATION STARTED [1]
-INFO    2016-06-15 21:24:06,387  - !1 -TEST_DATA_ROW {13}   , TEST_CASE {Mod_02_TC_03}, ITERATION {1}
-INFO    2016-06-15 21:24:06,387  - Child Test started [LaunchBrowser]
-INFO    2016-06-15 21:24:06,419  - get_TestData (Browser_Name) discovered at col: 3
-INFO    2016-06-15 21:24:06,420  - {Browser_Name} (CommonData) Value: firefox
-INFO    2016-06-15 21:24:30,542  - firefox Browser launched
-INFO    2016-06-15 21:24:30,543  - info - [STEP:] Launch Browser,      [DETAILS:] firefox is launched with all desired capabilities
-INFO    2016-06-15 21:24:30,701  - Child test appended [com.relevantcodes.extentreports.ExtentTest@418c5a9c]
-INFO    2016-06-15 21:24:30,702  - !1 -TEST_DATA_ROW {13}   , TEST_CASE {Mod_02_TC_03}, ITERATION {1}
-INFO    2016-06-15 21:24:30,702  - Child Test started [LaunchApp]
-INFO    2016-06-15 21:24:30,703  - get_TestData (App_URL) discovered at col: 4
-INFO    2016-06-15 21:24:30,703  - {App_URL} Value: https://www.google.co.in/
-INFO    2016-06-15 21:24:35,299  - Child test appended [com.relevantcodes.extentreports.ExtentTest@44c73c26]
-INFO    2016-06-15 21:24:35,300  - !1 -TEST_DATA_ROW {13}   , TEST_CASE {Mod_02_TC_03}, ITERATION {1}
-INFO    2016-06-15 21:24:35,300  - Child Test started [OpenGnewsPage]
-INFO    2016-06-15 21:24:48,181  - Child test appended [com.relevantcodes.extentreports.ExtentTest@38ba6ce3]
-INFO    2016-06-15 21:24:48,181  - !1 -TEST_DATA_ROW {13}   , TEST_CASE {Mod_02_TC_03}, ITERATION {1}
-INFO    2016-06-15 21:24:48,181  - Child Test started [print_news1]
-INFO    2016-06-15 21:24:48,207  - Problem execution/Invoking the Keyword print_news1, Casue - java.lang.NullPointerException , Message: [Ljava.lang.StackTraceElement;@d278d2b
-ERROR   2016-06-15 21:24:50,382  - [STEP:] print_news1could not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@2d6c53fc<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_24_48_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_24_48_IST_2016.png' />
-INFO    2016-06-15 21:24:50,382  - Child test appended [com.relevantcodes.extentreports.ExtentTest@4e423aa2]
-INFO    2016-06-15 21:24:50,383  - !1 -TEST_DATA_ROW {13}   , TEST_CASE {Mod_02_TC_03}, ITERATION {1}
-INFO    2016-06-15 21:24:50,383  - Child Test started [click_Gplay]
-INFO    2016-06-15 21:25:13,926  - set_TestData param key putHere discovered at col 8
-INFO    2016-06-15 21:25:13,977  - putHere is set to value gplay clicked
-INFO    2016-06-15 21:25:13,977  - info - [STEP:] set_TestData [putHere],      [DETAILS:] Is set to [gplay clicked]
-INFO    2016-06-15 21:25:13,977  - Child test appended [com.relevantcodes.extentreports.ExtentTest@56c4278e]
-INFO    2016-06-15 21:25:13,978  - !1 -TEST_DATA_ROW {13}   , TEST_CASE {Mod_02_TC_03}, ITERATION {1}
-INFO    2016-06-15 21:25:13,978  - Child Test started [Select_Click_gPlaySection]
-INFO    2016-06-15 21:25:13,979  - get_TestData (gApp_section) discovered at col: 6
-INFO    2016-06-15 21:25:13,979  - {gApp_section} Value: Books
-INFO    2016-06-15 21:25:13,997  - Problem execution/Invoking the Keyword Select_Click_gPlaySection, Casue - java.lang.NullPointerException , Message: [Ljava.lang.StackTraceElement;@301eda63
-ERROR   2016-06-15 21:25:18,227  - [STEP:] Select_Click_gPlaySectioncould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@3d246ea3<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_25_13_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_25_13_IST_2016.png' />
-INFO    2016-06-15 21:25:18,228  - Child test appended [com.relevantcodes.extentreports.ExtentTest@4397ad89]
-INFO    2016-06-15 21:25:18,228  - !1 -TEST_DATA_ROW {13}   , TEST_CASE {Mod_02_TC_03}, ITERATION {1}
-INFO    2016-06-15 21:25:18,228  - Child Test started [QuitApp]
-INFO    2016-06-15 21:25:21,724  - info - [STEP:] Close Browser,      [DETAILS:] Done
-INFO    2016-06-15 21:25:21,724  - Child test appended [com.relevantcodes.extentreports.ExtentTest@3abada5a]
-INFO    2016-06-15 21:25:21,724  - ITERATION COMPLETED [1] 
-INFO    2016-06-15 21:25:21,724  - TEST CASE EXECUTION COMPLETED [Mod_02_TC_03]
-INFO    2016-06-15 21:25:21,724  - ------------------------------------------------------------------
-INFO    2016-06-15 21:25:21,727  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@1e461e41
-INFO    2016-06-15 21:25:21,727  - Extent reporter test started [Mod_02_TC_04]  Disscription [Description - Mod_02_TC_04]
-INFO    2016-06-15 21:25:21,727  - Authour Assigned
-INFO    2016-06-15 21:25:21,727  - Moudle is assigne Mod_02
-INFO    2016-06-15 21:25:21,728  - TEST CASE under Execution [Mod_02_TC_04]
-INFO    2016-06-15 21:25:21,728  - ITERATION MODE: [Run one iteration only]
-INFO    2016-06-15 21:25:21,729  - Test Data Row is Pointing at {14} ,TESTCASE {Mod_02_TC_04} , ITERATION {1}
-INFO    2016-06-15 21:25:21,729  -  ITERATION STARTED [1]
-INFO    2016-06-15 21:25:21,729  - !1 -TEST_DATA_ROW {14}   , TEST_CASE {Mod_02_TC_04}, ITERATION {1}
-INFO    2016-06-15 21:25:21,729  - Child Test started [LaunchBrowser]
-INFO    2016-06-15 21:25:21,730  - get_TestData (Browser_Name) discovered at col: 3
-INFO    2016-06-15 21:25:21,730  - {Browser_Name} (CommonData) Value: firefox
-INFO    2016-06-15 21:25:36,418  - firefox Browser launched
-INFO    2016-06-15 21:25:36,418  - info - [STEP:] Launch Browser,      [DETAILS:] firefox is launched with all desired capabilities
-INFO    2016-06-15 21:25:36,419  - Child test appended [com.relevantcodes.extentreports.ExtentTest@3cdf2c61]
-INFO    2016-06-15 21:25:36,419  - !1 -TEST_DATA_ROW {14}   , TEST_CASE {Mod_02_TC_04}, ITERATION {1}
-INFO    2016-06-15 21:25:36,419  - Child Test started [LaunchApp]
-INFO    2016-06-15 21:25:36,420  - get_TestData (App_URL) discovered at col: 4
-INFO    2016-06-15 21:25:36,420  - {App_URL} Value: https://www.google.co.in/
-INFO    2016-06-15 21:25:40,341  - Child test appended [com.relevantcodes.extentreports.ExtentTest@1e097d59]
-INFO    2016-06-15 21:25:40,342  - !1 -TEST_DATA_ROW {14}   , TEST_CASE {Mod_02_TC_04}, ITERATION {1}
-INFO    2016-06-15 21:25:40,342  - Child Test started [SelectGapp]
-INFO    2016-06-15 21:25:40,342  - get_TestData (AppName) discovered at col: 5
-INFO    2016-06-15 21:25:40,343  - {AppName} Value: News
-INFO    2016-06-15 21:25:40,343  - Problem execution/Invoking the Keyword SelectGapp, Casue - java.lang.NullPointerException , Message: [Ljava.lang.StackTraceElement;@673be18f
-ERROR   2016-06-15 21:25:40,562  - [STEP:] SelectGappcould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@6581dc0a<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_25_40_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_25_40_IST_2016.png' />
-INFO    2016-06-15 21:25:40,563  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6ce86ce1]
-INFO    2016-06-15 21:25:40,563  - !1 -TEST_DATA_ROW {14}   , TEST_CASE {Mod_02_TC_04}, ITERATION {1}
-INFO    2016-06-15 21:25:40,563  - Child Test started [print_news]
-INFO    2016-06-15 21:25:40,564  - Problem execution/Invoking the Keyword print_news, Casue - java.lang.NullPointerException , Message: [Ljava.lang.StackTraceElement;@54e7df6a
-ERROR   2016-06-15 21:25:40,794  - [STEP:] print_newscould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@3fed2870<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_25_40_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Wed_Jun_15_21_24_02_IST_2016\Screenshots\Wed_Jun_15_21_25_40_IST_2016.png' />
-INFO    2016-06-15 21:25:40,794  - Child test appended [com.relevantcodes.extentreports.ExtentTest@58326051]
-INFO    2016-06-15 21:25:40,794  - !1 -TEST_DATA_ROW {14}   , TEST_CASE {Mod_02_TC_04}, ITERATION {1}
-INFO    2016-06-15 21:25:40,794  - Child Test started [QuitApp]
-INFO    2016-06-15 21:25:43,071  - info - [STEP:] Close Browser,      [DETAILS:] Done
-INFO    2016-06-15 21:25:43,072  - Child test appended [com.relevantcodes.extentreports.ExtentTest@764faa6]
-INFO    2016-06-15 21:25:43,072  - ITERATION COMPLETED [1] 
-INFO    2016-06-15 21:25:43,072  - TEST CASE EXECUTION COMPLETED [Mod_02_TC_04]
-INFO    2016-06-15 21:25:43,072  - ------------------------------------------------------------------
-INFO    2016-06-15 21:25:43,072  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@4c1f22f3
-INFO    2016-06-15 21:25:43,073  - @@Module {Mod_02} Execution Completed
-INFO    2016-06-15 21:25:43,859  - Report FLUSHED !!!!
-INFO    2016-06-15 21:25:43,859  - %%%%%%%%%%%%%     All applicable Modules are executed       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+INFO    2016-06-17 22:52:09,366  - Logger Started
+INFO    2016-06-17 22:52:09,397  - Config file loaded C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Files\Config.property
+INFO    2016-06-17 22:52:10,725  - Extent report started at path C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Fri_Jun_17_22_52_09_IST_2016\Report.html
+INFO    2016-06-17 22:52:12,835  - 
+INFO    2016-06-17 22:52:12,846  - $$$$$$ MODULE UNDER EXECUTION [Mod_02]
+INFO    2016-06-17 22:52:12,848  - Extent reporter test started [Mod_02_TC_02]  Disscription [Description - Mod_02_TC_02]
+INFO    2016-06-17 22:52:12,848  - Authour Assigned
+INFO    2016-06-17 22:52:12,848  - Moudle is assigne Mod_02
+INFO    2016-06-17 22:52:12,848  - TEST CASE under Execution [Mod_02_TC_02]
+INFO    2016-06-17 22:52:12,848  - ITERATION MODE: [Run all iterations]
+INFO    2016-06-17 22:52:12,863  - Test Data Row is Pointing at {10} ,TESTCASE {Mod_02_TC_02} , ITERATION {1}
+INFO    2016-06-17 22:52:12,863  -  ITERATION STARTED [1]
+INFO    2016-06-17 22:52:12,863  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-17 22:52:12,863  - Child Test started [LaunchBrowser]
+INFO    2016-06-17 22:52:12,895  - get_TestData (Browser_Name) discovered at col: 3
+INFO    2016-06-17 22:52:12,895  - {Browser_Name} (CommonData) Value: Chrome
+INFO    2016-06-17 22:52:22,926  - Chrome Browser launched
+INFO    2016-06-17 22:52:22,928  - info - [STEP:] Launch Browser,      [DETAILS:] Chrome is launched with all desired capabilities
+INFO    2016-06-17 22:52:23,133  - Child test appended [com.relevantcodes.extentreports.ExtentTest@616ac46a]
+INFO    2016-06-17 22:52:23,134  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-17 22:52:23,134  - Child Test started [LaunchApp]
+INFO    2016-06-17 22:52:23,136  - get_TestData (App_URL) discovered at col: 4
+INFO    2016-06-17 22:52:23,136  - {App_URL} (CommonData) Value: https://www.google.co.in/
+INFO    2016-06-17 22:52:34,540  - Child test appended [com.relevantcodes.extentreports.ExtentTest@4e31276e]
+INFO    2016-06-17 22:52:34,541  - Master test data Row 10
+INFO    2016-06-17 22:52:34,541  - !2 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {1}
+INFO    2016-06-17 22:52:34,541  - Child Test started [SelectGapp]
+INFO    2016-06-17 22:52:34,542  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-17 22:52:34,542  - {AppName} Value: Play
+INFO    2016-06-17 22:52:34,543  - get_TestData (AppNameIndex) discovered at col: 9
+INFO    2016-06-17 22:52:34,543  - {AppNameIndex} Value: 
+INFO    2016-06-17 22:52:47,912  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6bf08014]
+INFO    2016-06-17 22:52:47,912  - Master test data Row 11
+INFO    2016-06-17 22:52:47,912  - !2 -TEST_DATA_ROW {11}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {2}
+INFO    2016-06-17 22:52:47,912  - Child Test started [SelectGapp]
+INFO    2016-06-17 22:52:47,913  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-17 22:52:47,913  - {AppName} Value: Search
+INFO    2016-06-17 22:52:47,914  - get_TestData (AppNameIndex) discovered at col: 9
+INFO    2016-06-17 22:52:47,914  - {AppNameIndex} Value: 
+INFO    2016-06-17 22:52:55,984  - Child test appended [com.relevantcodes.extentreports.ExtentTest@53251a66]
+INFO    2016-06-17 22:52:55,984  - Master test data Row 12
+INFO    2016-06-17 22:52:55,984  - !2 -TEST_DATA_ROW {12}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {3}
+INFO    2016-06-17 22:52:55,984  - Child Test started [SelectGapp]
+INFO    2016-06-17 22:52:55,985  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-17 22:52:55,985  - {AppName} Value: News
+INFO    2016-06-17 22:52:55,986  - get_TestData (AppNameIndex) discovered at col: 9
+INFO    2016-06-17 22:52:55,986  - {AppNameIndex} Value: 
+INFO    2016-06-17 22:53:04,404  - Child test appended [com.relevantcodes.extentreports.ExtentTest@20435c40]
+INFO    2016-06-17 22:53:04,405  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-17 22:53:04,406  - Child Test started [print_news]
+INFO    2016-06-17 22:53:04,455  - Problem execution/Invoking the Keyword print_news, Casue - java.lang.NullPointerException , Message: [Ljava.lang.StackTraceElement;@573906eb
+ERROR   2016-06-17 22:53:04,890  - [STEP:] print_newscould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@479ceda0<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Fri_Jun_17_22_52_09_IST_2016\Screenshots\Fri_Jun_17_22_53_04_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Fri_Jun_17_22_52_09_IST_2016\Screenshots\Fri_Jun_17_22_53_04_IST_2016.png' />
+INFO    2016-06-17 22:53:04,890  - Child test appended [com.relevantcodes.extentreports.ExtentTest@571c5681]
+INFO    2016-06-17 22:53:04,890  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-17 22:53:04,891  - Child Test started [QuitApp]
+INFO    2016-06-17 22:53:07,182  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-17 22:53:07,182  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5a2d131d]
+INFO    2016-06-17 22:53:07,185  - ITERATION COMPLETED [1] 
+WARN    2016-06-17 22:53:07,186  - ITERATION COMPLETED - NO TEST DATA ROW AVAILABLE
+INFO    2016-06-17 22:53:07,186  - TEST CASE EXECUTION COMPLETED [Mod_02_TC_02]
+INFO    2016-06-17 22:53:07,186  - ------------------------------------------------------------------
+INFO    2016-06-17 22:53:07,186  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@a4add54
+INFO    2016-06-17 22:53:07,186  - @@Module {Mod_02} Execution Completed
+INFO    2016-06-17 22:53:07,748  - Report FLUSHED !!!!
+INFO    2016-06-17 22:53:07,748  - %%%%%%%%%%%%%     All applicable Modules are executed       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

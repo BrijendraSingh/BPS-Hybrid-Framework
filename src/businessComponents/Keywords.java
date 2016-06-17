@@ -2,6 +2,7 @@ package businessComponents;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -106,11 +107,34 @@ public class Keywords {
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public void SelectGapp(){
-		String[] AppName = ExcelUtil.get_TestData("AppName").split(",");
-		int index = Integer.parseInt(ExcelUtil.get_TestData("AppNameIndex"));
+		String strAppName 	=ExcelUtil.get_TestData("AppName");
+		String strIndex 	=ExcelUtil.get_TestData("AppNameIndex"); 
+		int index=1000;
+		
+		String AppName=null;
+		if(!strIndex.toString().isEmpty()){ 
+			index = Integer.parseInt(strIndex);
+			String[] arrAppName = strAppName.split(",");
+			if (arrAppName.length > index){
+				AppName = arrAppName[index];
+				index=index+1;
+				ExcelUtil.set_TestData("AppNameIndex", Integer.toString(index));
+			}else{
+				AppName = arrAppName[index];
+				index=0;
+				ExcelUtil.set_TestData("AppNameIndex", Integer.toString(index));
+			}
+		}else{
+			AppName=strAppName;
+		}
+		
+		
+		System.out.println("##################### ok, i am inside of this keyword Select Gapp {" + AppName);
 		putWAIT(5000);
 		gHomePage.click_gApp();
-		gHomePage.SelectClick_GoogApp(AppName[index]);
+		//WebElement app = driver.findElement(By.id("gbwa"));
+		//app.click();
+		gHomePage.SelectClick_GoogApp(AppName);
 		index=index+1;
 		//ExcelUtil.set_TestData("AppNameIndex", ""+index);
 	}

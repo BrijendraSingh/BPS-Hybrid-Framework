@@ -47,6 +47,10 @@ public class ExcelDriver {
 		
 		LogFW.log("%%%%%%%%%%%%%     All applicable Modules are executed       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 		//System.out.println("%%%%%%%%%%%%%All applicable Modules are executed%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		
+		//launch result
+		ExcelUtil.launchResult();
+		
 	}
 	
 }

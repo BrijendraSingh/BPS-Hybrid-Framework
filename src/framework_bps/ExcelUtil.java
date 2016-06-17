@@ -14,6 +14,11 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -35,7 +40,8 @@ public class ExcelUtil {
 	static String currentSheetName;
 	static WebDriver driver;
 	static ExtentTest ChildTest;
-	static Keywords B_lib=null;
+	static Keywords B_lib;
+	static String ResultFolder;
 
 
 	public static Workbook connectXl(String Wname){
@@ -401,6 +407,16 @@ public class ExcelUtil {
 		}else{
 			LogFW.error(paramName + " is not found in test data sheet");
 		}
+	}
+	
+	public static void launchResult(){
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\Drivers\\IEDriverServer.exe");
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		WebDriver driver1 = new InternetExplorerDriver(cap);
+		
+		ResultFolder = Reporter.ResultFolderName;
+		driver1.get(System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolder+"\\Report.html");
 	}
 
 }

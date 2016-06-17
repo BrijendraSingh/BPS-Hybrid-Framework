@@ -5,16 +5,20 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework_bps.FW_Config;
 import framework_bps.Reporter;
 
 public class GoogleHomePage {
 	WebDriver driver;
+	WebDriverWait wait;
 	
 	//@@ Constructor to set the Webdriver
 	public GoogleHomePage(WebDriver ldriver) {
 		driver = ldriver;
+		wait = new WebDriverWait(driver, 30);
 	}
 	
 	//@@start your objects
@@ -35,6 +39,7 @@ public class GoogleHomePage {
 	
 	//@@ Object Methodes
 	public void click_gApp(){
+		wait.until(ExpectedConditions.elementToBeClickable(gApp));
 		try {
 			gApp.click();
 			Reporter.logPASS("Google app Icon Click","Done");
