@@ -5,16 +5,20 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import framework_bps.FW_Config;
-import framework_bps.Reporter;
+import framework_bps.BRIJ_Config;
+import framework_bps.BRIJ_Reporter;
 
 public class GoogleHomePage {
 	WebDriver driver;
+	WebDriverWait wait;
 	
 	//@@ Constructor to set the Webdriver
 	public GoogleHomePage(WebDriver ldriver) {
 		driver = ldriver;
+		wait = new WebDriverWait(driver, 30);
 	}
 	
 	//@@start your objects
@@ -35,11 +39,12 @@ public class GoogleHomePage {
 	
 	//@@ Object Methodes
 	public void click_gApp(){
+		wait.until(ExpectedConditions.elementToBeClickable(gApp));
 		try {
 			gApp.click();
-			Reporter.logPASS("Google app Icon Click","Done");
+			BRIJ_Reporter.logPASS("Google app Icon Click","Done");
 		}catch(Throwable e) {
-			Reporter.logFATAL("Google App Icon Click, NOT DONE", e.getMessage());
+			BRIJ_Reporter.logFATAL("Google App Icon Click, NOT DONE", e.getMessage());
 		}		
 	}
 	
@@ -48,15 +53,16 @@ public class GoogleHomePage {
 		if (gAppIcons.size()>0){
 			for (int i=0;i<gAppIcons.size();i++){
 				if (gAppIcons.get(i).getText().equalsIgnoreCase(AppName)){
+					wait.until(ExpectedConditions.elementToBeClickable(gAppIcons.get(i)));
 					gAppIcons.get(i).click();
 					RetVAL=1;
-					Reporter.logPASS("Google Application Selected", AppName);
+					BRIJ_Reporter.logPASS("Google Application Selected", AppName);
 					break;
 				}
 			}
 		}
 		if ( RetVAL==0){
-			Reporter.logFAIL("Google Application not Selected", AppName);
+			BRIJ_Reporter.logFAIL("Google Application not Selected", AppName);
 		}
 	}
 	
@@ -69,19 +75,19 @@ public class GoogleHomePage {
 	public void click_gNews(){
 		try {
 			gNews.click();
-			Reporter.logPASS("Google News click","Done");
+			BRIJ_Reporter.logPASS("Google News click","Done");
 		}catch(Throwable e) {
-			Reporter.logFATAL("Google News Click Error", e.getMessage());
-			FW_Config.config.setProperty("TerminateTC", "YES");
+			BRIJ_Reporter.logFATAL("Google News Click Error", e.getMessage());
+			BRIJ_Config.config.setProperty("TerminateTC", "YES");
 		}
 	}	
 	
 	public void click_gPlay(){
 		try {
 			gPlay.click();
-			Reporter.logPASS("Google Play click","Done");
+			BRIJ_Reporter.logPASS("Google Play click","Done");
 		}catch(Throwable e) {
-			Reporter.logFATAL("Google Play Click Error", e.getMessage());
+			BRIJ_Reporter.logFATAL("Google Play Click Error", e.getMessage());
 		}
 	}
 }
