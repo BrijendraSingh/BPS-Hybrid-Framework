@@ -3,8 +3,8 @@ package framework_bps;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-public class LogFW {
-	static Logger logger = Logger.getLogger(LogFW.class);
+public class BRIJ_Log {
+	static Logger logger = Logger.getLogger(BRIJ_Log.class);
 	
 	public static void createLogger(){
 		String log4jConfigFile = System.getProperty("user.dir")+ "\\Files\\log4j.properties.txt";

@@ -27,7 +27,7 @@ import businessComponents.Keywords;
 import freemarker.log.Logger;
 
 
-public class ExcelUtil {
+public class BRIJ_ExcelUtil {
 	
 	static String testCaseName, iterationMode, strCurrentKeyword, strTestCaseDescription;
 	static Sheet currentSheet, dataSheet;
@@ -52,12 +52,12 @@ public class ExcelUtil {
 			FileInputStream fis = new FileInputStream(xlFile);
 			xl = new XSSFWorkbook(fis);
 		} catch (FileNotFoundException e) {
-			LogFW.warning("File not found " + Wname);
+			BRIJ_Log.warning("File not found " + Wname);
 			//System.out.println("File not found " + Wname);
 			e.printStackTrace();
 		} catch (IOException e) {
 			//System.out.println("IO exception while opening XSSF workbook");
-			LogFW.warning("IO exception while opening XSSF workbook");
+			BRIJ_Log.warning("IO exception while opening XSSF workbook");
 			e.printStackTrace();
 		}
 		return xl;
@@ -74,17 +74,17 @@ public class ExcelUtil {
 				strTestCaseDescription = currentSheet.getRow(i).getCell(2).toString();
 				keywordRow=currentSheet.getRow(i);
 				
-				//@ Start Reporter
-				Reporter.StartReporterTest(testCaseName, strTestCaseDescription);
-				Reporter.setMODULE(currentSheet.getSheetName().toString());
+				//@ Start BRIJ_Reporter
+				BRIJ_Reporter.StartReporterTest(testCaseName, strTestCaseDescription);
+				BRIJ_Reporter.setMODULE(currentSheet.getSheetName().toString());
 				//@ Start cases execution 
 				executeTestCase();
 				
-				//@ End Reporter
-				Reporter.endTest();
+				//@ End BRIJ_Reporter
+				BRIJ_Reporter.endTest();
 			}
 		}
-		LogFW.log("@@Module {" + currentSheet.getSheetName() + "} Execution Completed");
+		BRIJ_Log.log("@@Module {" + currentSheet.getSheetName() + "} Execution Completed");
 	}
 	
 	public static boolean setIterationRow(){
@@ -93,7 +93,7 @@ public class ExcelUtil {
 		for (int sb=1; sb<=intUsedRow; sb++){
 			if (dataSheet.getRow(sb).getCell(0).toString().equalsIgnoreCase(testCaseName) && dataSheet.getRow(sb).getCell(1).getNumericCellValue()==currentIteration){
 				//System.out.println("Data Row pointer at " + sb + " ,Testcases is " + testCaseName + " , itration is " + currentIteration);
-				LogFW.log("Test Data Row is Pointing at {" + sb + "} ,TESTCASE {" + testCaseName + "} , ITERATION {" + currentIteration + "}");
+				BRIJ_Log.log("Test Data Row is Pointing at {" + sb + "} ,TESTCASE {" + testCaseName + "} , ITERATION {" + currentIteration + "}");
 				IterationCrntRow_TestData=sb;
 				flag=true;
 				break;
@@ -105,7 +105,7 @@ public class ExcelUtil {
 
 	public static void executeTestCase(){
 		
-		LogFW.log("TEST CASE under Execution [" + testCaseName +"]");
+		BRIJ_Log.log("TEST CASE under Execution [" + testCaseName +"]");
 		
 		//-----------------------
 		readIteration();
@@ -119,9 +119,9 @@ public class ExcelUtil {
 			//logic to validate incorrect iteration row
 			if(!dataSheet.getRow(IterationCrntRow_TestData).getCell(0).toString().equalsIgnoreCase(testCaseName)){
 				if (iterationMode.equalsIgnoreCase("Run from <Start Iteration> to <End Iteration>") || currentIteration==1){
-					LogFW.log("Iteration started (" + currentIteration + ")");
-					LogFW.warning("No test data found for this test case iteration ! All subsequent iterations aborted");
-					LogFW.log("Iteration Completed (" + currentIteration + ")");
+					BRIJ_Log.log("Iteration started (" + currentIteration + ")");
+					BRIJ_Log.warning("No test data found for this test case iteration ! All subsequent iterations aborted");
+					BRIJ_Log.log("Iteration Completed (" + currentIteration + ")");
 				}
 				break;
 			}
@@ -129,17 +129,17 @@ public class ExcelUtil {
 			//set iteration row number and check for correct data row
 			if (!setIterationRow()){
 				if (endIteration==65535){
-					LogFW.warning("ITERATION COMPLETED - NO TEST DATA ROW AVAILABLE");
+					BRIJ_Log.warning("ITERATION COMPLETED - NO TEST DATA ROW AVAILABLE");
 					break;
 				}else{
-					LogFW.warning("Test Data row not found for Iteration {" + currentIteration + "} , ! All subsequent iterations aborted");
+					BRIJ_Log.warning("Test Data row not found for Iteration {" + currentIteration + "} , ! All subsequent iterations aborted");
 					break;
 				}
 			}
 			
-			LogFW.log("ITERATION STARTED [" + currentIteration + "]");
-			//IterationTest = Reporter.StartIteration_ReporterTest("Iteration " + Integer.toString(currentIteration));
-			//ChildTest = Reporter.StartChild_ReporterTest("Iteration " + Integer.toString(currentIteration));
+			BRIJ_Log.log("ITERATION STARTED [" + currentIteration + "]");
+			//IterationTest = BRIJ_Reporter.StartIteration_ReporterTest("Iteration " + Integer.toString(currentIteration));
+			//ChildTest = BRIJ_Reporter.StartChild_ReporterTest("Iteration " + Integer.toString(currentIteration));
 			//run loop for available keywords
 			keywordCount=keywordRow.getLastCellNum()-6;
 			
@@ -156,12 +156,12 @@ public class ExcelUtil {
 							groupedKeywords.add(strCurrentKeyword);
 							intMasterTDRow=IterationCrntRow_TestData;
 							
-							//LogFW.log("Master test data Row " + intMasterTDRow);
-							LogFW.log("TEST_DATA_ROW {" + IterationCrntRow_TestData + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration +"}"  );
+							//BRIJ_Log.log("Master test data Row " + intMasterTDRow);
+							BRIJ_Log.log("TEST_DATA_ROW {" + IterationCrntRow_TestData + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration +"}"  );
 					
 							//EXECUTION OF NON SUB ITERATION KEYWORDS
 							for (String subg: groupedKeywords){
-								//LogFW.log(subg);
+								//BRIJ_Log.log(subg);
 								executeKeyword(subg);
 							}
 							
@@ -184,41 +184,41 @@ public class ExcelUtil {
 								for ( int subIt = IterationCrntRow_TestData; subIt<IterationCrntRow_TestData+intSubIterations;subIt++ ){
 									intMasterTDRow=subIt;
 									
-									LogFW.log("Master test data Row " + intMasterTDRow);
-									LogFW.log("TEST_DATA_ROW {" + subIt + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration + "}, SUBITERATION {" + groupIndex +"}" );
+									BRIJ_Log.log("Master test data Row " + intMasterTDRow);
+									BRIJ_Log.log("TEST_DATA_ROW {" + subIt + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration + "}, SUBITERATION {" + groupIndex +"}" );
 									intBPSsubIteration = groupIndex;
 									for (String subg: groupedKeywords){
-										//LogFW.log(subg);
+										//BRIJ_Log.log(subg);
 										executeKeyword(subg);
 									}
 									groupIndex=groupIndex+1;
 								}
 								//intBPSsubIteration=0;
 								groupedKeywords.clear();
-								//LogFW.log("------------------------------------------------------------------");
+								//BRIJ_Log.log("------------------------------------------------------------------");
 							}
 						}										
 					}else{
-						//LogFW.log("------------------------------------------------------------------");
+						//BRIJ_Log.log("------------------------------------------------------------------");
 						break;
 					}
 				}
-			//Reporter.Append_IterationTest(ChildTest);
-			//Reporter.Append_ChildTest(ChildTest);
-			LogFW.log("ITERATION COMPLETED [" + currentIteration + "] ");
-			//LogFW.log("------------------------------------------------------------------");
+			//BRIJ_Reporter.Append_IterationTest(ChildTest);
+			//BRIJ_Reporter.Append_ChildTest(ChildTest);
+			BRIJ_Log.log("ITERATION COMPLETED [" + currentIteration + "] ");
+			//BRIJ_Log.log("------------------------------------------------------------------");
 			currentIteration=currentIteration+1;  			
 		}
-		LogFW.log("TEST CASE EXECUTION COMPLETED [" + testCaseName +"]");
-		LogFW.log("------------------------------------------------------------------");
+		BRIJ_Log.log("TEST CASE EXECUTION COMPLETED [" + testCaseName +"]");
+		BRIJ_Log.log("------------------------------------------------------------------");
 	}
 	
 	public static void readIteration(){
 		iterationMode=keywordRow.getCell(3).toString();
 		//System.out.println();
 		//System.out.println("@@@@@@@@@@@@----------Iteration Mode is: " + iterationMode);
-		//LogFW.log("------------------------------------------------------------------");
-		LogFW.log("ITERATION MODE: [" + iterationMode + "]");
+		//BRIJ_Log.log("------------------------------------------------------------------");
+		BRIJ_Log.log("ITERATION MODE: [" + iterationMode + "]");
 		if (iterationMode.equalsIgnoreCase("Run one iteration only")){
 			startIteration=1; 
 			endIteration=1;
@@ -241,18 +241,18 @@ public class ExcelUtil {
 			}else{
 				endIteration=(int)keywordRow.getCell(5).getNumericCellValue(); 
 			}
-			LogFW.log("Start_Iteration [" + startIteration + "]  !! End_Iterattion [" + endIteration +"]");
+			BRIJ_Log.log("Start_Iteration [" + startIteration + "]  !! End_Iterattion [" + endIteration +"]");
 			//System.out.println("Start iteration: " + startIteration + " , End iterattion is: " + endIteration);
 			
 			currentIteration=startIteration;
 		}else{
-			LogFW.warning("No iteration mode is found do assuming only 1 iteration");
+			BRIJ_Log.warning("No iteration mode is found do assuming only 1 iteration");
 			//System.out.println("No iteration mode is found do assuming only 1 iteration");
 			startIteration=1; 
 			endIteration=1;
 			currentIteration=1;
 		}
-		//LogFW.log("------------------------------------------------------------------");
+		//BRIJ_Log.log("------------------------------------------------------------------");
 	}
 	
 
@@ -284,12 +284,12 @@ public class ExcelUtil {
 	
 	public static void executeKeyword(String keyword){
 		//@@ Child test started
-		ChildTest = Reporter.StartChild_ReporterTest("Iteration [" + currentIteration + "] ......." + keyword);
+		ChildTest = BRIJ_Reporter.StartChild_ReporterTest("Iteration [" + currentIteration + "] ......." + keyword);
 
 		
 		//@@ check for launch browser to setup the browser and pass the driver
 		if (keyword.equalsIgnoreCase("LaunchBrowser")){
-			driver=BrowserSetup.LaunchBrowser();
+			driver=BRIJ_BrowserSetup.LaunchBrowser();
 			B_lib =  new Keywords(driver);
 		}else{
 			Method method;
@@ -297,19 +297,19 @@ public class ExcelUtil {
 				//launch keyword
 				method = Keywords.class.getDeclaredMethod(keyword,null);
 				method.invoke(B_lib, null);	
-				if (FW_Config.config.getProperty("TerminateTC").equalsIgnoreCase("yes")){
+				if (BRIJ_Config.config.getProperty("TerminateTC").equalsIgnoreCase("yes")){
 					//framework_ReportClass.logFATAL("Terminating This TC Execution", "FATAL ERROR");
-					FW_Config.config.setProperty("TerminateTC", "NO");
+					BRIJ_Config.config.setProperty("TerminateTC", "NO");
 					driver.close();
 					driver.quit();
 					//break;
 				}
 			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				LogFW.log("Problem execution/Invoking the Keyword " + keyword + ", Casue - " + e.getCause()+ " , Message: " + e.getStackTrace());
-				Reporter.logFATAL(keyword + "could not be executed ", e.getCause() + " | " + e.getStackTrace());
+				BRIJ_Log.log("Problem execution/Invoking the Keyword " + keyword + ", Casue - " + e.getCause()+ " , Message: " + e.getStackTrace());
+				BRIJ_Reporter.logFATAL(keyword + "could not be executed ", e.getCause() + " | " + e.getStackTrace());
 			}
 		}
-		Reporter.Append_ChildTest(ChildTest);
+		BRIJ_Reporter.Append_ChildTest(ChildTest);
 	}
 	
 	
@@ -320,7 +320,7 @@ public class ExcelUtil {
 	 * @Discription: get_TestData, Take the testData from the testData sheet for corresponding parameter
 	 * -----------------------------------------------------------------------------------------------------
 	 */
-	public static String get_TestData(String paramname){
+	public static String BPS_GetTestData(String paramname){
 		
 		String paramvalue="",commonDataIdentifier,CommonDataSheetName,keyVal ;
 		
@@ -332,7 +332,7 @@ public class ExcelUtil {
 			if (dataSheet.getRow(0).getCell(ic).toString().equalsIgnoreCase(paramname)){
 				intparamCol=ic;
 				paramFlag=true;
-				LogFW.log("get_TestData (" + paramname + ") discovered at col: " + intparamCol);
+				BRIJ_Log.log("get_TestData (" + paramname + ") discovered at col: " + intparamCol);
 				break;
 			}
 		}
@@ -341,8 +341,8 @@ public class ExcelUtil {
 			
 			keyVal = dataSheet.getRow(intMasterTDRow).getCell(intparamCol).toString();
 			
-			commonDataIdentifier=FW_Config.config.getProperty("CommonDataIdentifier");
-			CommonDataSheetName =FW_Config.config.getProperty("CommonnDataSheet_Name");
+			commonDataIdentifier=BRIJ_Config.config.getProperty("CommonDataIdentifier");
+			CommonDataSheetName =BRIJ_Config.config.getProperty("CommonnDataSheet_Name");
 			
 			if (keyVal.indexOf(commonDataIdentifier)==0){
 				Sheet CDSheet = TestData.getSheet(CommonDataSheetName);
@@ -360,36 +360,36 @@ public class ExcelUtil {
 							if (CDSheet.getRow(0).getCell(loopC).toString().equalsIgnoreCase(paramname)){
 								paramvalue=CDSheet.getRow(loopR).getCell(loopC).toString();
 								//System.out.println(key + " is(CommonData) " + keyVal);
-								LogFW.log("{" + paramname + "} (CommonData) Value: " + paramvalue);
+								BRIJ_Log.log("{" + paramname + "} (CommonData) Value: " + paramvalue);
 								cmnFlag=true;
 								break;
 							}
 						}
 						if (!cmnFlag){
-							LogFW.error(paramname + " is(CommonData) and could not be identified " );
+							BRIJ_Log.error(paramname + " is(CommonData) and could not be identified " );
 						}
 					}
 				}
 			}else{
 				paramvalue=keyVal;
-				LogFW.log("{"+paramname + "} Value: " + paramvalue);
+				BRIJ_Log.log("{"+paramname + "} Value: " + paramvalue);
 			}
 			
 		}else{
-			LogFW.error("get_TestData param key " + paramname + " is not discovered in data sheet module " + dataSheet.getSheetName());
+			BRIJ_Log.error("get_TestData param key " + paramname + " is not discovered in data sheet module " + dataSheet.getSheetName());
 		}
 		return paramvalue;
 	}
 	
 	
-	/** set_TestData
+	/** BPS_SetTestData
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: set_TestData, set the testData from the run time and set it in test data sheet
+	 * @Discription: BPS_SetTestData, set the testData from the run time and set it in test data sheet
 	 * -----------------------------------------------------------------------------------------------------
 	 */
-	public static void set_TestData(String paramName, String paramVal){
+	public static void BPS_SetTestData(String paramName, String paramVal){
 		
 		int intindexrow, intparamCol=0;
 		boolean paramFlag=false ;
@@ -400,17 +400,17 @@ public class ExcelUtil {
 			if (dataSheet.getRow(0).getCell(ic).toString().equalsIgnoreCase(paramName)){
 				intparamCol=ic;
 				paramFlag=true;
-				LogFW.log("set_TestData param key " + paramName + " discovered at col " + intparamCol);
+				BRIJ_Log.log("BPS_SetTestData param key " + paramName + " discovered at col " + intparamCol);
 				break;
 			}
 		}
 		
 		if (paramFlag){
 			dataSheet.getRow(intMasterTDRow).createCell(intparamCol).setCellValue(paramVal.toString());
-			LogFW.log(paramName + " is set to value " + dataSheet.getRow(intMasterTDRow).getCell(intparamCol).toString());
-			Reporter.logINFO("set_TestData [" + paramName + "]", "Is set to [" + dataSheet.getRow(intMasterTDRow).getCell(intparamCol).toString() + "]");
+			BRIJ_Log.log(paramName + " is set to value " + dataSheet.getRow(intMasterTDRow).getCell(intparamCol).toString());
+			BRIJ_Reporter.logINFO("BPS_SetTestData [" + paramName + "]", "Is set to [" + dataSheet.getRow(intMasterTDRow).getCell(intparamCol).toString() + "]");
 		}else{
-			LogFW.error(paramName + " is not found in test data sheet");
+			BRIJ_Log.error(paramName + " is not found in test data sheet");
 		}
 	}
 	
@@ -418,7 +418,7 @@ public class ExcelUtil {
 		String ResultLauncher;
 		DesiredCapabilities cap;
 		WebDriver driver1;
-		ResultLauncher= FW_Config.config.getProperty("LaunchResultInBrowser");
+		ResultLauncher= BRIJ_Config.config.getProperty("LaunchResultInBrowser");
 		
 		switch (ResultLauncher){
 			case "Chrome":
@@ -432,7 +432,7 @@ public class ExcelUtil {
 				driver1 = new InternetExplorerDriver(cap);
 				break;
 			case "Mozila":
-				String FF_Profile = FW_Config.config.getProperty("Firfox_Profile");
+				String FF_Profile = BRIJ_Config.config.getProperty("Firfox_Profile");
 				ProfilesIni profile = new ProfilesIni();
 				FirefoxProfile ffprofile = profile.getProfile(FF_Profile);
 				
@@ -447,7 +447,7 @@ public class ExcelUtil {
 				driver1 = new InternetExplorerDriver(cap);
 				break;
 		}	
-		ResultFolder = Reporter.ResultFolderName;
+		ResultFolder = BRIJ_Reporter.ResultFolderName;
 		driver1.get(System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolder+"\\Report.html");
 	}
 

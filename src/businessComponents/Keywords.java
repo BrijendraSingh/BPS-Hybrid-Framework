@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import framework_bps.BrowserSetup;
-import framework_bps.ExcelUtil;
-import framework_bps.FW_Config;
-import framework_bps.Reporter;
+import framework_bps.BRIJ_BrowserSetup;
+import framework_bps.BRIJ_ExcelUtil;
+import framework_bps.BRIJ_Config;
+import framework_bps.BRIJ_Reporter;
 import pageobjects.GoogleHomePage;
 import pageobjects.GoogleNewsPage;
 import pageobjects.GooglePlayPage;
@@ -48,7 +48,7 @@ public class Keywords {
 	 */
 	public void appNavigateBack(){
 		driver.navigate().back();
-		Reporter.logPASS("Open Previous Page", "Done");
+		BRIJ_Reporter.logPASS("Open Previous Page", "Done");
 	}
 	
 	/**4. QuitApp
@@ -60,12 +60,12 @@ public class Keywords {
 	 */
 	public void QuitApp(){
 		try{
-			BrowserSetup.getMainDriver().close();
-			BrowserSetup.getMainDriver().quit();
-			Reporter.logINFO("Close Browser" , "Done");
+			BRIJ_BrowserSetup.getMainDriver().close();
+			BRIJ_BrowserSetup.getMainDriver().quit();
+			BRIJ_Reporter.logINFO("Close Browser" , "Done");
 			driver = null;
 		}catch (Throwable e){
-			Reporter.logERROR("Close Browser error", e.getMessage());
+			BRIJ_Reporter.logERROR("Close Browser error", e.getMessage());
 		}
 	}
 	
@@ -94,10 +94,10 @@ public class Keywords {
 		gHomePage.click_gApp();
 		gHomePage.click_gNews();
 		if (driver.getTitle().equalsIgnoreCase("Google News")){
-			Reporter.logPASS("Google News Page Open", "Done");
+			BRIJ_Reporter.logPASS("Google News Page Open", "Done");
 		}else{
-			Reporter.logFATAL("Google News Page Open", "NOT OPEN");
-			FW_Config.config.setProperty("TerminateTC", "YES");
+			BRIJ_Reporter.logFATAL("Google News Page Open", "NOT OPEN");
+			BRIJ_Config.config.setProperty("TerminateTC", "YES");
 		}
 	}
 	
@@ -109,8 +109,8 @@ public class Keywords {
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public void SelectGapp(){
-		String strAppName 	=ExcelUtil.get_TestData("AppName");
-		String strIndex 	=ExcelUtil.get_TestData("AppNameIndex"); 
+		String strAppName 	=BRIJ_ExcelUtil.BPS_GetTestData("AppName");
+		String strIndex 	=BRIJ_ExcelUtil.BPS_GetTestData("AppNameIndex"); 
 		int index=1000;
 		
 		String AppName=null;
@@ -120,11 +120,11 @@ public class Keywords {
 			if (arrAppName.length > index){
 				AppName = arrAppName[index];
 				index=index+1;
-				ExcelUtil.set_TestData("AppNameIndex", Integer.toString(index));
+				BRIJ_ExcelUtil.BPS_SetTestData("AppNameIndex", Integer.toString(index));
 			}else{
 				AppName = arrAppName[index];
 				index=0;
-				ExcelUtil.set_TestData("AppNameIndex", Integer.toString(index));
+				BRIJ_ExcelUtil.BPS_SetTestData("AppNameIndex", Integer.toString(index));
 			}
 		}else{
 			AppName=strAppName;
@@ -142,11 +142,11 @@ public class Keywords {
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public void SelectGapp_trad(){
-		String AppName = ExcelUtil.get_TestData("AppName");
+		String AppName = BRIJ_ExcelUtil.BPS_GetTestData("AppName");
 		putWAIT(5000);
 		gHomePage.click_gApp();
 		gHomePage.SelectClick_GoogApp(AppName);
-		ExcelUtil.set_TestData("putHere", "parafst83");
+		BRIJ_ExcelUtil.BPS_SetTestData("putHere", "parafst83");
 	}
 	/** print_news
 	 * ----------------------------------------------------------------------------------------------------
@@ -161,15 +161,15 @@ public class Keywords {
 			int i=1; 
 			for(WebElement ele: gntitle){		
 				if (ele.getText()!=""){
-					Reporter.logINFO("News Item is - ", ele.getText());
+					BRIJ_Reporter.logINFO("News Item is - ", ele.getText());
 				}
 				i=i+1;
 			}	
-			Reporter.logPASS("Google News Page", "News Printed");
+			BRIJ_Reporter.logPASS("Google News Page", "News Printed");
 		}else{
-			Reporter.logFAIL("Google news page", "News Items are not found");
+			BRIJ_Reporter.logFAIL("Google news page", "News Items are not found");
 		}
-		//Reporter.logFATAL("print Google news", "Check if pass/fail is available !!");
+		//BRIJ_Reporter.logFATAL("print Google news", "Check if pass/fail is available !!");
 	}
 		
 	/** print_news1
@@ -185,12 +185,12 @@ public class Keywords {
 		if (gntitle.size()>0){
 			int i=1; 
 			for(WebElement ele: gntitle){
-				Reporter.logINFO("News " + i + "is - ", ele.getText());
+				BRIJ_Reporter.logINFO("News " + i + "is - ", ele.getText());
 				i=i+1;
 			}
-			Reporter.logPASS("Google news page", "News Printed");
+			BRIJ_Reporter.logPASS("Google news page", "News Printed");
 		}else{
-			Reporter.logFAIL("Google news page", "News Items are not found");
+			BRIJ_Reporter.logFAIL("Google news page", "News Items are not found");
 		}
 		
 	}
@@ -203,15 +203,15 @@ public class Keywords {
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public void LaunchApp(){
-		String appUrl = ExcelUtil.get_TestData("App_URL");
-		//set_testdata validation
-		//framework_ExcelSupportMethods.set_TestData("testData", "mozila");
+		String appUrl = BRIJ_ExcelUtil.BPS_GetTestData("App_URL");
+		//BPS_SetTestData validation
+		//framework_ExcelSupportMethods.BPS_SetTestData("testData", "mozila");
 		
 		driver.navigate().to(appUrl);
 		if (driver.getTitle().equalsIgnoreCase("Google")){
-			Reporter.logPASS("Google Home Page", "Title Validated");
+			BRIJ_Reporter.logPASS("Google Home Page", "Title Validated");
 		}else{
-			Reporter.logFAIL("Google Home Page", "Title is not Validated");
+			BRIJ_Reporter.logFAIL("Google Home Page", "Title is not Validated");
 		}						
 	}
 		
@@ -224,14 +224,14 @@ public class Keywords {
 	 */
 	public void Select_Click_gPlaySection(){	
 		
-		String section=ExcelUtil.get_TestData("gApp_section");	
+		String section=BRIJ_ExcelUtil.BPS_GetTestData("gApp_section");	
 		
 		if (gPlayPage.click_gAppSection(section)==1){
-			Reporter.logPASS(section + " is clicked","Google Play Page");
+			BRIJ_Reporter.logPASS(section + " is clicked","Google Play Page");
 		}else{
-			Reporter.logFATAL("Google Play Page", section + " is not Clicked");
+			BRIJ_Reporter.logFATAL("Google Play Page", section + " is not Clicked");
 		}		
-		gPlayPage.click_gPlayAccountSection(ExcelUtil.get_TestData("gPlayAccountSection"));
+		gPlayPage.click_gPlayAccountSection(BRIJ_ExcelUtil.BPS_GetTestData("gPlayAccountSection"));
 		gPlayPage.click_CancelButton();
 	}
 	
@@ -252,7 +252,7 @@ public class Keywords {
 		gHomePage.click_gApp();
 		gHomePage.click_gPlay();	
 		
-		ExcelUtil.set_TestData("putHere", "gplay clicked");
+		BRIJ_ExcelUtil.BPS_SetTestData("putHere", "gplay clicked");
 	}
 	
 	/** Validate
@@ -264,26 +264,26 @@ public class Keywords {
 	 */
 	public void Validate(String actual, String compareWith){
 		if (actual.equalsIgnoreCase(compareWith)){
-			Reporter.logPASS(actual + " is compared with :", compareWith);
+			BRIJ_Reporter.logPASS(actual + " is compared with :", compareWith);
 		}else{		
-			Reporter.logFAIL( actual + " is compared with :" ,compareWith );
+			BRIJ_Reporter.logFAIL( actual + " is compared with :" ,compareWith );
 		}
 	}
 	
 	public void dummyOne(){
-		Reporter.logPASS("Test step", "Log pass");
-		Reporter.logWARNING("Test Step ", "Log warning");
+		BRIJ_Reporter.logPASS("Test step", "Log pass");
+		BRIJ_Reporter.logWARNING("Test Step ", "Log warning");
 	}
 	
 	public void dummyTwo(){
-		Reporter.logFATAL("Test step", "Log fatel");
-		Reporter.logPASS("Test step", "Log pass");
-		Reporter.logWARNING("Test Step ", "Log warning");
+		BRIJ_Reporter.logFATAL("Test step", "Log fatel");
+		BRIJ_Reporter.logPASS("Test step", "Log pass");
+		BRIJ_Reporter.logWARNING("Test Step ", "Log warning");
 	}
 	
 	public void dummyThree(){
-		Reporter.logFAIL("Test step", "Log fail");
-		Reporter.logPASS("Test step", "Log pass");
-		Reporter.logWARNING("Test Step ", "Log warning");
+		BRIJ_Reporter.logFAIL("Test step", "Log fail");
+		BRIJ_Reporter.logPASS("Test step", "Log pass");
+		BRIJ_Reporter.logWARNING("Test Step ", "Log warning");
 	}
 }

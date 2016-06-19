@@ -27,7 +27,7 @@ import businessComponents.Keywords;
  * @Discription: FW_Reporter, Create and Manages the Reporting of execution
  * -----------------------------------------------------------------------------------------------------
  */
-public class Reporter {
+public class BRIJ_Reporter {
 	
 	static ExtentReports extent;
 	static ExtentTest test,ChildTest,IterationTest;
@@ -55,9 +55,9 @@ public class Reporter {
                 //start extent report
                 extent = new ExtentReports(System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolderName+"\\Report.html" ,true, NetworkMode.OFFLINE);
                 extent.loadConfig(new File(System.getProperty("user.dir")+"\\Files\\extent-config.xml"));
-                LogFW.log("Extent report started at path " + System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolderName+"\\Report.html");
+                BRIJ_Log.log("Extent report started at path " + System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolderName+"\\Report.html");
             } else {
-            	LogFW.error("Run_"+ResultFolderName+" :Failed to create directory!");
+            	BRIJ_Log.error("Run_"+ResultFolderName+" :Failed to create directory!");
             }
         }        
 	}
@@ -71,9 +71,9 @@ public class Reporter {
 	 */
 	public static void StartReporterTest(String testName, String TestDescription){
 		test = extent.startTest(testName, TestDescription);
-		LogFW.log("Extent reporter test started [" + testName + "]  Disscription [" + TestDescription +"]");
+		BRIJ_Log.log("Extent reporter test started [" + testName + "]  Disscription [" + TestDescription +"]");
 		test.assignAuthor("Brijendra Singh");
-		LogFW.log("Authour Assigned");
+		BRIJ_Log.log("Authour Assigned");
 		//test.setDescription(TestDescription);
 	}
 	
@@ -86,7 +86,7 @@ public class Reporter {
 	 */
 	public static ExtentTest StartChild_ReporterTest(String testName){
 		ChildTest=null;
-		LogFW.log("Child Test started [" + testName + "]" );
+		BRIJ_Log.log("Child Test started [" + testName + "]" );
 		return ChildTest = extent.startTest(testName);	
 	}
 	
@@ -101,7 +101,7 @@ public class Reporter {
 	public static void Append_ChildTest(ExtentTest ChildTest){
 		test.appendChild(ChildTest);
 		//IterationTest.appendChild(ChildTest);
-		LogFW.log("Child test appended [" + ChildTest.toString() + "]");
+		BRIJ_Log.log("Child test appended [" + ChildTest.toString() + "]");
 	}
 	
 	
@@ -114,7 +114,7 @@ public class Reporter {
 	 */
 	public static ExtentTest StartIteration_ReporterTest(String testName){
 		IterationTest=null;
-		LogFW.log("Iteration Test started [" + testName + "]" );
+		BRIJ_Log.log("Iteration Test started [" + testName + "]" );
 		return IterationTest = extent.startTest(testName);	
 	}
 	
@@ -128,7 +128,7 @@ public class Reporter {
 	 */
 	public static void Append_IterationTest(ExtentTest ChildTest){
 		test.appendChild(ChildTest);
-		LogFW.log("Iteration test appended [" + ChildTest.toString() + "]");
+		BRIJ_Log.log("Iteration test appended [" + ChildTest.toString() + "]");
 	}
 	/** flushReporter
 	 * ----------------------------------------------------------------------------------------------------
@@ -139,7 +139,7 @@ public class Reporter {
 	 */
 	public static void flushReporter(){
 		extent.flush();
-		LogFW.log("Report FLUSHED !!!!");
+		BRIJ_Log.log("Report FLUSHED !!!!");
 	}
 	
 	/** flushReporter
@@ -151,7 +151,7 @@ public class Reporter {
 	 */
 	public static void endTest(){
 		extent.endTest(test);
-		LogFW.log("Test Ended !!" + test.toString());
+		BRIJ_Log.log("Test Ended !!" + test.toString());
 	}
 	
 	/** setMODULE
@@ -163,18 +163,18 @@ public class Reporter {
 	 */
 	public static void setMODULE(String ModuleName){
 		test.assignCategory(ModuleName);
-		LogFW.log("Moudle is assigne " + ModuleName);
+		BRIJ_Log.log("Moudle is assigne " + ModuleName);
 	}
 	
 	/**1. logPASS , step and details
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logPASS, logs the passed steps to the Reporter with stepName and detail parameters
+	 * @Discription: logPASS, logs the passed steps to the BRIJ_Reporter with stepName and detail parameters
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logPASS(String stepName,String details){
-		if(FW_Config.config.getProperty("ScreenShot_CapturePASS").toString().equalsIgnoreCase("true")){
+		if(BRIJ_Config.config.getProperty("ScreenShot_CapturePASS").toString().equalsIgnoreCase("true")){
 			date = new Date();
 			driver =Keywords.getdriver();
 			scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -197,12 +197,12 @@ public class Reporter {
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logFAIL, logs the failed steps to the Reporter with detail parameters and also takes
+	 * @Discription: logFAIL, logs the failed steps to the BRIJ_Reporter with detail parameters and also takes
 	 * 				 the screenshots
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logFAIL(String stepName,String details){
-		if(FW_Config.config.getProperty("ScreenShot_CaptureFAIL").toString().equalsIgnoreCase("true")){
+		if(BRIJ_Config.config.getProperty("ScreenShot_CaptureFAIL").toString().equalsIgnoreCase("true")){
 			date = new Date();
 			driver =Keywords.getdriver();
 			scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -226,23 +226,23 @@ public class Reporter {
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logERROR, logs the WARNING steps to the Reporter with detail parameter only
+	 * @Discription: logERROR, logs the WARNING steps to the BRIJ_Reporter with detail parameter only
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logERROR(String stepName, String details){
 		ChildTest.log(LogStatus.ERROR, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-		LogFW.log("error - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
+		BRIJ_Log.log("error - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
 	}
 	
 	/**4. logFATAL , Steps, details
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logFATAL, logs the FATAL steps to the Reporter with detail parameter only
+	 * @Discription: logFATAL, logs the FATAL steps to the BRIJ_Reporter with detail parameter only
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logFATAL(String stepName, String details){
-		if(FW_Config.config.getProperty("ScreenShot_CaptureFAIL").toString().equalsIgnoreCase("true")){
+		if(BRIJ_Config.config.getProperty("ScreenShot_CaptureFAIL").toString().equalsIgnoreCase("true")){
 			date = new Date();
 			driver =Keywords.getdriver();
 			scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -256,10 +256,10 @@ public class Reporter {
 			}
 			//test.log(LogStatus.FAIL, details + test.addScreenCapture(path));
 			ChildTest.log(LogStatus.FATAL, "[STEP:] " + stepName + ",      [DETAILS:] "+ details + ChildTest.addScreenCapture(path));
-			LogFW.error("[STEP:] " + stepName + ",      [DETAILS:] "+ details + ChildTest.addScreenCapture(path));
+			BRIJ_Log.error("[STEP:] " + stepName + ",      [DETAILS:] "+ details + ChildTest.addScreenCapture(path));
 		}else{
 			ChildTest.log(LogStatus.FATAL, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-			LogFW.error("[STEP:] " + stepName + ",      [DETAILS:] "+ details);
+			BRIJ_Log.error("[STEP:] " + stepName + ",      [DETAILS:] "+ details);
 		}
 	}
 	
@@ -267,48 +267,48 @@ public class Reporter {
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logSKIP, logs the SKIP steps to the Reporter with detail parameter only
+	 * @Discription: logSKIP, logs the SKIP steps to the BRIJ_Reporter with detail parameter only
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logSKIP(String stepName, String details){
 		ChildTest.log(LogStatus.SKIP, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-		LogFW.log("skip - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
+		BRIJ_Log.log("skip - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
 	}
 	
 	/**6. logUNKNOWN , Steps, details
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logUNKNOWN, logs the UNKNOWN steps to the Reporter with detail parameter only
+	 * @Discription: logUNKNOWN, logs the UNKNOWN steps to the BRIJ_Reporter with detail parameter only
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logUNKNOWN(String stepName, String details){
 		ChildTest.log(LogStatus.UNKNOWN, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-		LogFW.log("unknown - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
+		BRIJ_Log.log("unknown - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
 	}
 	
 	/**7. logWARNING , Steps, details
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logWARNING, logs the WARNING steps to the Reporter with detail parameter only
+	 * @Discription: logWARNING, logs the WARNING steps to the BRIJ_Reporter with detail parameter only
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logWARNING(String stepName, String details){
 		ChildTest.log(LogStatus.WARNING, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-		LogFW.log("warning - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
+		BRIJ_Log.log("warning - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
 	}
 	
 	/**8. logINFO , details
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
-	 * @Discription: logINFO, logs the information steps to the Reporter with detail parameter only
+	 * @Discription: logINFO, logs the information steps to the BRIJ_Reporter with detail parameter only
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static void logINFO(String stepName, String details){
 		ChildTest.log(LogStatus.INFO, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-		LogFW.log("info - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
+		BRIJ_Log.log("info - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
 	}
 	
 	/**9. logINFO_Keyword , details
@@ -320,7 +320,7 @@ public class Reporter {
 	 */
 	public static void logINFO_Keyword(String stepName, String details){
 		ChildTest.log(LogStatus.INFO, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-		LogFW.log("logINFO_Keyword - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
+		BRIJ_Log.log("logINFO_Keyword - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
 	}
 	
 	/**6. logTCName , Steps, details
@@ -332,7 +332,7 @@ public class Reporter {
 	 */
 	public static void logTCName(String stepName, String details){
 		ChildTest.log(LogStatus.UNKNOWN, "[STEP:] " + stepName + ",      [DETAILS:] "+ details);
-		LogFW.log("logTCName - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
+		BRIJ_Log.log("logTCName - [STEP:] " + stepName + ",      [DETAILS:] "+ details);
 	}
 	
 	/** OpenResult
@@ -344,11 +344,11 @@ public class Reporter {
 	 */
 	public static void OpenResult(){
 		ProfilesIni profile = new ProfilesIni();
-		FirefoxProfile ffprofile = profile.getProfile(FW_Config.config.getProperty("Firfox_Profile"));
+		FirefoxProfile ffprofile = profile.getProfile(BRIJ_Config.config.getProperty("Firfox_Profile"));
 		WebDriver result = new FirefoxDriver(ffprofile);
 		result.manage().window().maximize();
 		result.get(System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolderName+"\\Report.html");
-		LogFW.log("OpenResult ran - " + System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolderName+"\\Report.html");
+		BRIJ_Log.log("OpenResult ran - " + System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolderName+"\\Report.html");
 	}
 	
 	/** getResultFolder
@@ -359,7 +359,7 @@ public class Reporter {
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static String getResultFolder(){
-		LogFW.log("getResultFolder ran " +ResultFolderName );
+		BRIJ_Log.log("getResultFolder ran " +ResultFolderName );
 		return ResultFolderName;
 	}
 	
@@ -371,7 +371,7 @@ public class Reporter {
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static Date getDate(){
-		LogFW.log("getDate ran");
+		BRIJ_Log.log("getDate ran");
 		return date;	
 	}
 	
@@ -383,7 +383,7 @@ public class Reporter {
 	 * -----------------------------------------------------------------------------------------------------
 	 */
 	public static ExtentTest getExtentTest(){
-		LogFW.log("getExtentTest ran");		
+		BRIJ_Log.log("getExtentTest ran");		
 		return test;
 	}
 	

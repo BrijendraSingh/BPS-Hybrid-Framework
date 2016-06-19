@@ -12,12 +12,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 
-public class BrowserSetup {
+public class BRIJ_BrowserSetup {
 static WebDriver driver;
 	
-	public static WebDriver LaunchBrowser(){
+	public static WebDriver LaunchBrowser(){ 
 		//@Browser type - from config file
-		String typeBrowser= ExcelUtil.get_TestData("Browser_Name");
+		String typeBrowser= BRIJ_ExcelUtil.BPS_GetTestData("Browser_Name");
 		
 		//@ Chrom Browser setup
 		if(typeBrowser.equalsIgnoreCase("chrome")){
@@ -26,7 +26,7 @@ static WebDriver driver;
 			
 		//@ Firefox Browser Setup - "mozila"	
 		}else if (typeBrowser.equalsIgnoreCase("mozila")){
-			String FF_Profile = FW_Config.config.getProperty("Firfox_Profile");
+			String FF_Profile = BRIJ_Config.config.getProperty("Firfox_Profile");
 			ProfilesIni profile = new ProfilesIni();
 			FirefoxProfile ffprofile = profile.getProfile(FF_Profile);
 			
@@ -43,7 +43,7 @@ static WebDriver driver;
 		
 		// Default case will launch the Firefox	
 		}else{
-			String FF_Profile = FW_Config.config.getProperty("Firfox_Profile");
+			String FF_Profile = BRIJ_Config.config.getProperty("Firfox_Profile");
 			ProfilesIni profile = new ProfilesIni();
 			FirefoxProfile ffprofile = profile.getProfile(FF_Profile);
 			
@@ -58,8 +58,8 @@ static WebDriver driver;
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		
-		LogFW.log(typeBrowser + " Browser launched");	
-		Reporter.logINFO("Launch Browser", typeBrowser + " is launched with all desired capabilities");
+		BRIJ_Log.log(typeBrowser + " Browser launched");	
+		BRIJ_Reporter.logINFO("Launch Browser", typeBrowser + " is launched with all desired capabilities");
 		return driver;
 	}
 	

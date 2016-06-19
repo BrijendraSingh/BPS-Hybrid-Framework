@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import framework_bps.Reporter;
+import framework_bps.BRIJ_Reporter;
 
 
 /**
@@ -34,9 +34,9 @@ public class GooglePlayPage {
 	public void click_CancelButton(){
 		try{
 			CancelButton.click();
-			Reporter.logPASS("Google Play-Cancel button", "Clicked");
+			BRIJ_Reporter.logPASS("Google Play-Cancel button", "Clicked");
 		}catch(Throwable e){
-			Reporter.logFATAL("Google Play-Cancel button", "Not found, Error - " + e.getMessage());
+			BRIJ_Reporter.logFATAL("Google Play-Cancel button", "Not found, Error - " + e.getMessage());
 		}
 	}
 	
@@ -61,12 +61,12 @@ public class GooglePlayPage {
 			for(int i=0; i<total_sections;i++){
 				if (gPlayAccountSection.get(i).getText().toString().equalsIgnoreCase(section)){
 					gPlayAccountSection.get(i).click();
-					Reporter.logPASS("gPlayAccountSection Click", section + " is Clicked");
+					BRIJ_Reporter.logPASS("gPlayAccountSection Click", section + " is Clicked");
 					break;
 				}
 			}
 		}else{
-			Reporter.logFAIL("gPlayAccountSection Click", section + " is not Clicked");
+			BRIJ_Reporter.logFAIL("gPlayAccountSection Click", section + " is not Clicked");
 		}
 	}
 }
