@@ -30,6 +30,8 @@ public class Keywords {
 	public Keywords(WebDriver ldriver) {
 		driver=ldriver;
 		gHomePage =  PageFactory.initElements(driver, GoogleHomePage.class);
+		gNewsPage =  PageFactory.initElements(driver, GoogleNewsPage.class);
+		gPlayPage =  PageFactory.initElements(driver, GooglePlayPage.class);
 	}
 	
 	public static WebDriver getdriver(){
@@ -127,16 +129,9 @@ public class Keywords {
 		}else{
 			AppName=strAppName;
 		}
-		
-		
-		System.out.println("##################### ok, i am inside of this keyword Select Gapp {" + AppName);
-		putWAIT(5000);
 		gHomePage.click_gApp();
-		//WebElement app = driver.findElement(By.id("gbwa"));
-		//app.click();
 		gHomePage.SelectClick_GoogApp(AppName);
 		index=index+1;
-		//ExcelUtil.set_TestData("AppNameIndex", ""+index);
 	}
 	
 	/** SelectGapp_trad
@@ -174,7 +169,7 @@ public class Keywords {
 		}else{
 			Reporter.logFAIL("Google news page", "News Items are not found");
 		}
-		Reporter.logFATAL("print Google news", "Check if pass/fail is available !!");
+		//Reporter.logFATAL("print Google news", "Check if pass/fail is available !!");
 	}
 		
 	/** print_news1
@@ -273,5 +268,22 @@ public class Keywords {
 		}else{		
 			Reporter.logFAIL( actual + " is compared with :" ,compareWith );
 		}
+	}
+	
+	public void dummyOne(){
+		Reporter.logPASS("Test step", "Log pass");
+		Reporter.logWARNING("Test Step ", "Log warning");
+	}
+	
+	public void dummyTwo(){
+		Reporter.logFATAL("Test step", "Log fatel");
+		Reporter.logPASS("Test step", "Log pass");
+		Reporter.logWARNING("Test Step ", "Log warning");
+	}
+	
+	public void dummyThree(){
+		Reporter.logFAIL("Test step", "Log fail");
+		Reporter.logPASS("Test step", "Log pass");
+		Reporter.logWARNING("Test Step ", "Log warning");
 	}
 }

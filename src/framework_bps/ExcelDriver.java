@@ -33,7 +33,7 @@ public class ExcelDriver {
 			if(main.getRow(i).getCell(1).toString().equalsIgnoreCase("TRUE")){
 				currentSheetName = main.getRow(i).getCell(0).toString();
 				LogFW.log("");
-				LogFW.log("$$$$$$ MODULE UNDER EXECUTION [" + currentSheetName + "]");
+				LogFW.log("MODULE UNDER EXECUTION [" + currentSheetName + "]");
 				
 				//Bases on the Execution flag, take the control over the current sheet for both the Exel files
 				currentSheet_key = RunManager.getSheet(currentSheetName);

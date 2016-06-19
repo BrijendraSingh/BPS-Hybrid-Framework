@@ -1,65 +1,636 @@
-INFO    2016-06-17 22:52:09,366  - Logger Started
-INFO    2016-06-17 22:52:09,397  - Config file loaded C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Files\Config.property
-INFO    2016-06-17 22:52:10,725  - Extent report started at path C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Fri_Jun_17_22_52_09_IST_2016\Report.html
-INFO    2016-06-17 22:52:12,835  - 
-INFO    2016-06-17 22:52:12,846  - $$$$$$ MODULE UNDER EXECUTION [Mod_02]
-INFO    2016-06-17 22:52:12,848  - Extent reporter test started [Mod_02_TC_02]  Disscription [Description - Mod_02_TC_02]
-INFO    2016-06-17 22:52:12,848  - Authour Assigned
-INFO    2016-06-17 22:52:12,848  - Moudle is assigne Mod_02
-INFO    2016-06-17 22:52:12,848  - TEST CASE under Execution [Mod_02_TC_02]
-INFO    2016-06-17 22:52:12,848  - ITERATION MODE: [Run all iterations]
-INFO    2016-06-17 22:52:12,863  - Test Data Row is Pointing at {10} ,TESTCASE {Mod_02_TC_02} , ITERATION {1}
-INFO    2016-06-17 22:52:12,863  -  ITERATION STARTED [1]
-INFO    2016-06-17 22:52:12,863  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
-INFO    2016-06-17 22:52:12,863  - Child Test started [LaunchBrowser]
-INFO    2016-06-17 22:52:12,895  - get_TestData (Browser_Name) discovered at col: 3
-INFO    2016-06-17 22:52:12,895  - {Browser_Name} (CommonData) Value: Chrome
-INFO    2016-06-17 22:52:22,926  - Chrome Browser launched
-INFO    2016-06-17 22:52:22,928  - info - [STEP:] Launch Browser,      [DETAILS:] Chrome is launched with all desired capabilities
-INFO    2016-06-17 22:52:23,133  - Child test appended [com.relevantcodes.extentreports.ExtentTest@616ac46a]
-INFO    2016-06-17 22:52:23,134  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
-INFO    2016-06-17 22:52:23,134  - Child Test started [LaunchApp]
-INFO    2016-06-17 22:52:23,136  - get_TestData (App_URL) discovered at col: 4
-INFO    2016-06-17 22:52:23,136  - {App_URL} (CommonData) Value: https://www.google.co.in/
-INFO    2016-06-17 22:52:34,540  - Child test appended [com.relevantcodes.extentreports.ExtentTest@4e31276e]
-INFO    2016-06-17 22:52:34,541  - Master test data Row 10
-INFO    2016-06-17 22:52:34,541  - !2 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {1}
-INFO    2016-06-17 22:52:34,541  - Child Test started [SelectGapp]
-INFO    2016-06-17 22:52:34,542  - get_TestData (AppName) discovered at col: 5
-INFO    2016-06-17 22:52:34,542  - {AppName} Value: Play
-INFO    2016-06-17 22:52:34,543  - get_TestData (AppNameIndex) discovered at col: 9
-INFO    2016-06-17 22:52:34,543  - {AppNameIndex} Value: 
-INFO    2016-06-17 22:52:47,912  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6bf08014]
-INFO    2016-06-17 22:52:47,912  - Master test data Row 11
-INFO    2016-06-17 22:52:47,912  - !2 -TEST_DATA_ROW {11}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {2}
-INFO    2016-06-17 22:52:47,912  - Child Test started [SelectGapp]
-INFO    2016-06-17 22:52:47,913  - get_TestData (AppName) discovered at col: 5
-INFO    2016-06-17 22:52:47,913  - {AppName} Value: Search
-INFO    2016-06-17 22:52:47,914  - get_TestData (AppNameIndex) discovered at col: 9
-INFO    2016-06-17 22:52:47,914  - {AppNameIndex} Value: 
-INFO    2016-06-17 22:52:55,984  - Child test appended [com.relevantcodes.extentreports.ExtentTest@53251a66]
-INFO    2016-06-17 22:52:55,984  - Master test data Row 12
-INFO    2016-06-17 22:52:55,984  - !2 -TEST_DATA_ROW {12}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {3}
-INFO    2016-06-17 22:52:55,984  - Child Test started [SelectGapp]
-INFO    2016-06-17 22:52:55,985  - get_TestData (AppName) discovered at col: 5
-INFO    2016-06-17 22:52:55,985  - {AppName} Value: News
-INFO    2016-06-17 22:52:55,986  - get_TestData (AppNameIndex) discovered at col: 9
-INFO    2016-06-17 22:52:55,986  - {AppNameIndex} Value: 
-INFO    2016-06-17 22:53:04,404  - Child test appended [com.relevantcodes.extentreports.ExtentTest@20435c40]
-INFO    2016-06-17 22:53:04,405  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
-INFO    2016-06-17 22:53:04,406  - Child Test started [print_news]
-INFO    2016-06-17 22:53:04,455  - Problem execution/Invoking the Keyword print_news, Casue - java.lang.NullPointerException , Message: [Ljava.lang.StackTraceElement;@573906eb
-ERROR   2016-06-17 22:53:04,890  - [STEP:] print_newscould not be executed ,      [DETAILS:] java.lang.NullPointerException | [Ljava.lang.StackTraceElement;@479ceda0<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Fri_Jun_17_22_52_09_IST_2016\Screenshots\Fri_Jun_17_22_53_04_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Fri_Jun_17_22_52_09_IST_2016\Screenshots\Fri_Jun_17_22_53_04_IST_2016.png' />
-INFO    2016-06-17 22:53:04,890  - Child test appended [com.relevantcodes.extentreports.ExtentTest@571c5681]
-INFO    2016-06-17 22:53:04,890  - !1 -TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
-INFO    2016-06-17 22:53:04,891  - Child Test started [QuitApp]
-INFO    2016-06-17 22:53:07,182  - info - [STEP:] Close Browser,      [DETAILS:] Done
-INFO    2016-06-17 22:53:07,182  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5a2d131d]
-INFO    2016-06-17 22:53:07,185  - ITERATION COMPLETED [1] 
-WARN    2016-06-17 22:53:07,186  - ITERATION COMPLETED - NO TEST DATA ROW AVAILABLE
-INFO    2016-06-17 22:53:07,186  - TEST CASE EXECUTION COMPLETED [Mod_02_TC_02]
-INFO    2016-06-17 22:53:07,186  - ------------------------------------------------------------------
-INFO    2016-06-17 22:53:07,186  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@a4add54
-INFO    2016-06-17 22:53:07,186  - @@Module {Mod_02} Execution Completed
-INFO    2016-06-17 22:53:07,748  - Report FLUSHED !!!!
-INFO    2016-06-17 22:53:07,748  - %%%%%%%%%%%%%     All applicable Modules are executed       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+INFO    2016-06-19 22:45:53,073  - Logger Started
+INFO    2016-06-19 22:45:53,078  - Config file loaded C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Files\Config.property
+INFO    2016-06-19 22:45:54,177  - Extent report started at path C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Report.html
+INFO    2016-06-19 22:45:56,039  - 
+INFO    2016-06-19 22:45:56,040  - MODULE UNDER EXECUTION [Mod_01]
+INFO    2016-06-19 22:45:56,049  - Extent reporter test started [Mod_01_TC_01]  Disscription [Description - Mod_01_TC_01]
+INFO    2016-06-19 22:45:56,050  - Authour Assigned
+INFO    2016-06-19 22:45:56,051  - Moudle is assigne Mod_01
+INFO    2016-06-19 22:45:56,051  - TEST CASE under Execution [Mod_01_TC_01]
+INFO    2016-06-19 22:45:56,052  - ITERATION MODE: [Run from <Start Iteration> to <End Iteration>]
+INFO    2016-06-19 22:45:56,074  - Start_Iteration [1]  !! End_Iterattion [2]
+INFO    2016-06-19 22:45:56,075  - Test Data Row is Pointing at {1} ,TESTCASE {Mod_01_TC_01} , ITERATION {1}
+INFO    2016-06-19 22:45:56,076  - ITERATION STARTED [1]
+INFO    2016-06-19 22:45:56,076  - TEST_DATA_ROW {1}   , TEST_CASE {Mod_01_TC_01}, ITERATION {1}
+INFO    2016-06-19 22:45:56,076  - Child Test started [Iteration [1] .......LaunchBrowser]
+INFO    2016-06-19 22:45:56,079  - get_TestData (Browser_Name) discovered at col: 3
+INFO    2016-06-19 22:45:56,080  - {Browser_Name} (CommonData) Value: Chrome
+INFO    2016-06-19 22:45:59,279  - Chrome Browser launched
+INFO    2016-06-19 22:45:59,281  - info - [STEP:] Launch Browser,      [DETAILS:] Chrome is launched with all desired capabilities
+INFO    2016-06-19 22:45:59,351  - Child test appended [com.relevantcodes.extentreports.ExtentTest@11bb571c]
+INFO    2016-06-19 22:45:59,353  - TEST_DATA_ROW {1}   , TEST_CASE {Mod_01_TC_01}, ITERATION {1}
+INFO    2016-06-19 22:45:59,354  - Child Test started [Iteration [1] .......LaunchApp]
+INFO    2016-06-19 22:45:59,354  - get_TestData (App_URL) discovered at col: 4
+INFO    2016-06-19 22:45:59,355  - {App_URL} (CommonData) Value: https://www.google.co.in/
+INFO    2016-06-19 22:46:03,173  - Child test appended [com.relevantcodes.extentreports.ExtentTest@78aa1f72]
+INFO    2016-06-19 22:46:03,174  - Master test data Row 1
+INFO    2016-06-19 22:46:03,174  - TEST_DATA_ROW {1}   , TEST_CASE {Mod_01_TC_01}, ITERATION {1}, SUBITERATION {1}
+INFO    2016-06-19 22:46:03,174  - Child Test started [Iteration [1] .......SelectGapp]
+INFO    2016-06-19 22:46:03,174  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:46:03,175  - {AppName} Value: Play
+INFO    2016-06-19 22:46:03,175  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:46:03,175  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:46:09,685  - Child test appended [com.relevantcodes.extentreports.ExtentTest@11f0a5a1]
+INFO    2016-06-19 22:46:09,685  - Master test data Row 2
+INFO    2016-06-19 22:46:09,685  - TEST_DATA_ROW {2}   , TEST_CASE {Mod_01_TC_01}, ITERATION {1}, SUBITERATION {2}
+INFO    2016-06-19 22:46:09,685  - Child Test started [Iteration [1] .......SelectGapp]
+INFO    2016-06-19 22:46:09,686  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:46:09,686  - {AppName} Value: Search
+INFO    2016-06-19 22:46:09,686  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:46:09,686  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:46:11,488  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6057aebb]
+INFO    2016-06-19 22:46:11,488  - Master test data Row 3
+INFO    2016-06-19 22:46:11,488  - TEST_DATA_ROW {3}   , TEST_CASE {Mod_01_TC_01}, ITERATION {1}, SUBITERATION {3}
+INFO    2016-06-19 22:46:11,488  - Child Test started [Iteration [1] .......SelectGapp]
+INFO    2016-06-19 22:46:11,490  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:46:11,491  - {AppName} Value: News
+INFO    2016-06-19 22:46:11,491  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:46:11,492  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:46:15,047  - Child test appended [com.relevantcodes.extentreports.ExtentTest@573906eb]
+INFO    2016-06-19 22:46:15,048  - TEST_DATA_ROW {1}   , TEST_CASE {Mod_01_TC_01}, ITERATION {1}
+INFO    2016-06-19 22:46:15,048  - Child Test started [Iteration [1] .......print_news]
+INFO    2016-06-19 22:46:15,404  - info - [STEP:] News Item is - ,      [DETAILS:] 39 Indians kidnapped by ISIS in Iraq are alive: Sushma Swaraj
+INFO    2016-06-19 22:46:15,602  - info - [STEP:] News Item is - ,      [DETAILS:] India received Rs 3.69 lakh crore in FDI in two years: Sushma Swaraj
+INFO    2016-06-19 22:46:16,264  - info - [STEP:] News Item is - ,      [DETAILS:] India playing role in shaping global agenda, says Sushma Swaraj
+INFO    2016-06-19 22:46:16,591  - info - [STEP:] News Item is - ,      [DETAILS:] India needs to recaliberate NSG stance ahead of Seoul meeting (Comment: Special to IANS)
+INFO    2016-06-19 22:46:16,968  - info - [STEP:] News Item is - ,      [DETAILS:] China is not opposed to India's NSG bid, we will convince Beijing: Sushma Swaraj
+INFO    2016-06-19 22:46:17,114  - info - [STEP:] News Item is - ,      [DETAILS:] Raghuram Rajan: RBI will survive any Governor, don't personalize my office
+INFO    2016-06-19 22:46:17,191  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,264  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,336  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,408  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,500  - info - [STEP:] News Item is - ,      [DETAILS:] Vijay Mallya not on invitee list of Indian High Commission in UK: MEA
+INFO    2016-06-19 22:46:17,574  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,666  - info - [STEP:] News Item is - ,      [DETAILS:] No Indian cricketer involved in alleged rape in Zimbabwe
+INFO    2016-06-19 22:46:17,739  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,810  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,884  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:17,957  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,030  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,111  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,204  - info - [STEP:] News Item is - ,      [DETAILS:] Donald Trump says US should start thinking about racial profiling
+INFO    2016-06-19 22:46:18,279  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,353  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,443  - info - [STEP:] News Item is - ,      [DETAILS:] PMO gets complaint: Essar allegedly tapped Ambani brothers, Suresh Prabhu, Vajpayee PMO staff
+INFO    2016-06-19 22:46:18,534  - info - [STEP:] News Item is - ,      [DETAILS:] Tamil Nadu: TMC president Vasan demands time-table on closure of TASMAC outlets
+INFO    2016-06-19 22:46:18,608  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,682  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,773  - info - [STEP:] News Item is - ,      [DETAILS:] Karnataka CM rejigs ministry
+INFO    2016-06-19 22:46:18,845  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,919  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:18,992  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,085  - info - [STEP:] News Item is - ,      [DETAILS:] Nitish Kumar says yoga irrelevant without country-wide liquor ban, urges PM Modi to act
+INFO    2016-06-19 22:46:19,167  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,244  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,344  - info - [STEP:] News Item is - ,      [DETAILS:] Arun Jaitley Attacks Amarinder Singh Over His Family's Alleged Foreign Accounts
+INFO    2016-06-19 22:46:19,419  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,496  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,571  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,664  - info - [STEP:] News Item is - ,      [DETAILS:] Campaigning for EU vote resumes after MP Jo Cox's murder
+INFO    2016-06-19 22:46:19,738  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,814  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,889  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:19,962  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,036  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,130  - info - [STEP:] News Item is - ,      [DETAILS:] Indonesia: 35 dead in Java floods and landslides
+INFO    2016-06-19 22:46:20,208  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,293  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,370  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,462  - info - [STEP:] News Item is - ,      [DETAILS:] China Condemns Indonesia's Firing On Chinese Boats In South China Sea
+INFO    2016-06-19 22:46:20,536  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,614  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,692  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,768  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,842  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:20,938  - info - [STEP:] News Item is - ,      [DETAILS:] Egyptian Court Sentences 2 Al-Jazeera Employees To Death
+INFO    2016-06-19 22:46:21,015  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:21,098  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:21,177  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:21,257  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:21,354  - info - [STEP:] News Item is - ,      [DETAILS:] SpiceJet to soon offer taxi to airport option with ticket
+INFO    2016-06-19 22:46:21,429  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:21,524  - info - [STEP:] News Item is - ,      [DETAILS:] ICICI Bank Attracts Rs. 3 Lakh Crore Digital Business In FY16
+INFO    2016-06-19 22:46:21,626  - info - [STEP:] News Item is - ,      [DETAILS:] Good monsoon to push GDP growth to 8% in FY17: Shaktikanta Das
+INFO    2016-06-19 22:46:21,701  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:21,796  - info - [STEP:] News Item is - ,      [DETAILS:] Will not cut govt stake in power PSUs below 51%: Piyush Goyal
+INFO    2016-06-19 22:46:21,872  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:21,948  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:22,044  - info - [STEP:] News Item is - ,      [DETAILS:] Father's Day: Tech firms release heart-warming messages, apps
+INFO    2016-06-19 22:46:22,137  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:22,217  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:22,319  - info - [STEP:] News Item is - ,      [DETAILS:] Father's Day: Haaptik's Baap Bot will remind you of your dad, here's why
+INFO    2016-06-19 22:46:22,397  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:22,473  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:22,565  - info - [STEP:] News Item is - ,      [DETAILS:] 68% of Nifty 50 companies are vulnerable to cyber attacks:Study
+INFO    2016-06-19 22:46:22,661  - info - [STEP:] News Item is - ,      [DETAILS:] Rolls-Royce shows off self-driving car with silk sofa, AI-assistant for chauffeur
+INFO    2016-06-19 22:46:22,738  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:22,814  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:22,908  - info - [STEP:] News Item is - ,      [DETAILS:] Dhanak Movie Review
+INFO    2016-06-19 22:46:22,984  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:23,060  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:23,157  - info - [STEP:] News Item is - ,      [DETAILS:] 1/61Spoiler alert: Shah Rukh Khan reveals his roles from upcoming films
+INFO    2016-06-19 22:46:23,249  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:23,388  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:23,526  - info - [STEP:] News Item is - ,      [DETAILS:] Salman Khan fears losing stardom
+INFO    2016-06-19 22:46:23,604  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:23,684  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:23,779  - info - [STEP:] News Item is - ,      [DETAILS:] Navya Naveli and many more celeb kids attend Aryan Khan's graduation bash
+INFO    2016-06-19 22:46:23,856  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:23,932  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,028  - info - [STEP:] News Item is - ,      [DETAILS:] 2016 Rio Olympics: Union sports minister wish Indian contingent luck, hopes for double-digit medal tally
+INFO    2016-06-19 22:46:24,125  - info - [STEP:] News Item is - ,      [DETAILS:] Photos: India's Ishant Sharma gets engaged to Pratima Singh
+INFO    2016-06-19 22:46:24,207  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,286  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,381  - info - [STEP:] News Item is - ,      [DETAILS:] Shaminda Eranga Banned From Bowling Due to Illegal Action
+INFO    2016-06-19 22:46:24,458  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,535  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,613  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,713  - info - [STEP:] News Item is - ,      [DETAILS:] Rosberg stops rot in Baku as Hamilton struggles
+INFO    2016-06-19 22:46:24,789  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,866  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:24,936  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,011  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,083  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,156  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,252  - info - [STEP:] News Item is - ,      [DETAILS:] Pizza and cold beer: British astronaut's wishlist after 6 months in space
+INFO    2016-06-19 22:46:25,326  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,397  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,468  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,556  - info - [STEP:] News Item is - ,      [DETAILS:] World's first 1000-processor microchip created in US varsity
+INFO    2016-06-19 22:46:25,628  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,707  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,796  - info - [STEP:] News Item is - ,      [DETAILS:] Nepal's quake-hit village Langtang gets tribute on Mars!
+INFO    2016-06-19 22:46:25,866  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:25,937  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,026  - info - [STEP:] News Item is - ,      [DETAILS:] Indian-origin researcher leads development of phone-based eye-tracking system
+INFO    2016-06-19 22:46:26,104  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,177  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,270  - info - [STEP:] News Item is - ,      [DETAILS:] Plant-Based Diet May Lower Risk Of Type 2 Diabetes
+INFO    2016-06-19 22:46:26,343  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,415  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,505  - info - [STEP:] News Item is - ,      [DETAILS:] Obesity In Women Affects At Least 3 Generations
+INFO    2016-06-19 22:46:26,576  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,662  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,752  - info - [STEP:] News Item is - ,      [DETAILS:] Single moms at greater risk of heart disease
+INFO    2016-06-19 22:46:26,821  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:26,911  - info - [STEP:] News Item is - ,      [DETAILS:] 1.7 lakh kids live near polio risk zone in Telangana
+INFO    2016-06-19 22:46:26,984  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:27,055  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:46:27,313  - Child test appended [com.relevantcodes.extentreports.ExtentTest@4f0100a7]
+INFO    2016-06-19 22:46:27,313  - TEST_DATA_ROW {1}   , TEST_CASE {Mod_01_TC_01}, ITERATION {1}
+INFO    2016-06-19 22:46:27,313  - Child Test started [Iteration [1] .......QuitApp]
+INFO    2016-06-19 22:46:29,021  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-19 22:46:29,022  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5a18cd76]
+INFO    2016-06-19 22:46:29,022  - ITERATION COMPLETED [1] 
+INFO    2016-06-19 22:46:29,022  - Test Data Row is Pointing at {4} ,TESTCASE {Mod_01_TC_01} , ITERATION {2}
+INFO    2016-06-19 22:46:29,022  - ITERATION STARTED [2]
+INFO    2016-06-19 22:46:29,023  - TEST_DATA_ROW {4}   , TEST_CASE {Mod_01_TC_01}, ITERATION {2}
+INFO    2016-06-19 22:46:29,023  - Child Test started [Iteration [2] .......LaunchBrowser]
+INFO    2016-06-19 22:46:29,023  - get_TestData (Browser_Name) discovered at col: 3
+INFO    2016-06-19 22:46:29,024  - {Browser_Name} (CommonData) Value: Mozila
+INFO    2016-06-19 22:46:45,360  - Mozila Browser launched
+INFO    2016-06-19 22:46:45,360  - info - [STEP:] Launch Browser,      [DETAILS:] Mozila is launched with all desired capabilities
+INFO    2016-06-19 22:46:45,362  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6179e425]
+INFO    2016-06-19 22:46:45,362  - TEST_DATA_ROW {4}   , TEST_CASE {Mod_01_TC_01}, ITERATION {2}
+INFO    2016-06-19 22:46:45,362  - Child Test started [Iteration [2] .......LaunchApp]
+INFO    2016-06-19 22:46:45,362  - get_TestData (App_URL) discovered at col: 4
+INFO    2016-06-19 22:46:45,363  - {App_URL} (CommonData) Value: https://www.google.co.in/
+INFO    2016-06-19 22:46:49,720  - Child test appended [com.relevantcodes.extentreports.ExtentTest@49c6c24f]
+INFO    2016-06-19 22:46:49,720  - Master test data Row 4
+INFO    2016-06-19 22:46:49,720  - TEST_DATA_ROW {4}   , TEST_CASE {Mod_01_TC_01}, ITERATION {2}, SUBITERATION {1}
+INFO    2016-06-19 22:46:49,720  - Child Test started [Iteration [2] .......SelectGapp]
+INFO    2016-06-19 22:46:49,721  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:46:49,721  - {AppName} Value: Play
+INFO    2016-06-19 22:46:49,721  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:46:49,721  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:47:07,935  - Child test appended [com.relevantcodes.extentreports.ExtentTest@ebaa6cb]
+INFO    2016-06-19 22:47:07,936  - Master test data Row 5
+INFO    2016-06-19 22:47:07,936  - TEST_DATA_ROW {5}   , TEST_CASE {Mod_01_TC_01}, ITERATION {2}, SUBITERATION {2}
+INFO    2016-06-19 22:47:07,936  - Child Test started [Iteration [2] .......SelectGapp]
+INFO    2016-06-19 22:47:07,936  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:47:07,937  - {AppName} Value: Search
+INFO    2016-06-19 22:47:07,937  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:47:07,937  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:47:18,124  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6e35bc3d]
+INFO    2016-06-19 22:47:18,124  - Master test data Row 6
+INFO    2016-06-19 22:47:18,124  - TEST_DATA_ROW {6}   , TEST_CASE {Mod_01_TC_01}, ITERATION {2}, SUBITERATION {3}
+INFO    2016-06-19 22:47:18,124  - Child Test started [Iteration [2] .......SelectGapp]
+INFO    2016-06-19 22:47:18,124  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:47:18,125  - {AppName} Value: News
+INFO    2016-06-19 22:47:18,125  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:47:18,125  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:47:27,752  - Child test appended [com.relevantcodes.extentreports.ExtentTest@232a7d73]
+INFO    2016-06-19 22:47:27,752  - TEST_DATA_ROW {4}   , TEST_CASE {Mod_01_TC_01}, ITERATION {2}
+INFO    2016-06-19 22:47:27,752  - Child Test started [Iteration [2] .......print_news]
+INFO    2016-06-19 22:47:28,629  - info - [STEP:] News Item is - ,      [DETAILS:] 39 Indians kidnapped by ISIS in Iraq are alive: Sushma Swaraj
+INFO    2016-06-19 22:47:31,341  - info - [STEP:] News Item is - ,      [DETAILS:] India received Rs 3.69 lakh crore in FDI in two years: Sushma Swaraj
+INFO    2016-06-19 22:47:31,820  - info - [STEP:] News Item is - ,      [DETAILS:] India playing role in shaping global agenda, says Sushma Swaraj
+INFO    2016-06-19 22:47:31,969  - info - [STEP:] News Item is - ,      [DETAILS:] India needs to recaliberate NSG stance ahead of Seoul meeting (Comment: Special to IANS)
+INFO    2016-06-19 22:47:32,115  - info - [STEP:] News Item is - ,      [DETAILS:] China is not opposed to India's NSG bid, we will convince Beijing: Sushma Swaraj
+INFO    2016-06-19 22:47:32,253  - info - [STEP:] News Item is - ,      [DETAILS:] Raghuram Rajan: RBI will survive any Governor, don't personalize my office
+INFO    2016-06-19 22:47:32,348  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:32,464  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:32,560  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:32,664  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:32,788  - info - [STEP:] News Item is - ,      [DETAILS:] Vijay Mallya not on invitee list of Indian High Commission in UK: MEA
+INFO    2016-06-19 22:47:32,883  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:33,007  - info - [STEP:] News Item is - ,      [DETAILS:] No Indian cricketer involved in alleged rape in Zimbabwe
+INFO    2016-06-19 22:47:33,101  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:33,200  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:33,300  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:33,414  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:33,511  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:33,737  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:33,863  - info - [STEP:] News Item is - ,      [DETAILS:] Donald Trump says US should start thinking about racial profiling
+INFO    2016-06-19 22:47:33,959  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:34,055  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:34,189  - info - [STEP:] News Item is - ,      [DETAILS:] PMO gets complaint: Essar allegedly tapped Ambani brothers, Suresh Prabhu, Vajpayee PMO staff
+INFO    2016-06-19 22:47:34,316  - info - [STEP:] News Item is - ,      [DETAILS:] Tasmac orders closure of 500 liquor shops
+INFO    2016-06-19 22:47:34,431  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:34,594  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:34,733  - info - [STEP:] News Item is - ,      [DETAILS:] Karnataka CM rejigs ministry
+INFO    2016-06-19 22:47:34,828  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:34,927  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:35,033  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:35,287  - info - [STEP:] News Item is - ,      [DETAILS:] Nitish Kumar says yoga irrelevant without country-wide liquor ban, urges PM Modi to act
+INFO    2016-06-19 22:47:35,436  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:35,588  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:35,767  - info - [STEP:] News Item is - ,      [DETAILS:] Arun Jaitley Attacks Amarinder Singh Over His Family's Alleged Foreign Accounts
+INFO    2016-06-19 22:47:35,927  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:36,113  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:36,232  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:36,409  - info - [STEP:] News Item is - ,      [DETAILS:] What's behind Britain's wrangling with the EU?
+INFO    2016-06-19 22:47:36,516  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:36,632  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:36,737  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:36,918  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:37,023  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:37,163  - info - [STEP:] News Item is - ,      [DETAILS:] Indonesia: Floods, landslides kill 35 in Central Java
+INFO    2016-06-19 22:47:37,267  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:37,366  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:37,501  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:37,746  - info - [STEP:] News Item is - ,      [DETAILS:] China Condemns Indonesia's Firing On Chinese Boats In South China Sea
+INFO    2016-06-19 22:47:37,875  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:38,009  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:38,195  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:38,341  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:38,515  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:38,686  - info - [STEP:] News Item is - ,      [DETAILS:] Egyptian Court Sentences 2 Al-Jazeera Employees To Death
+INFO    2016-06-19 22:47:38,829  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:38,966  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:39,092  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:39,211  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:39,382  - info - [STEP:] News Item is - ,      [DETAILS:] SpiceJet to soon offer taxi to airport option with ticket
+INFO    2016-06-19 22:47:39,527  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:39,766  - info - [STEP:] News Item is - ,      [DETAILS:] ICICI Bank Attracts Rs. 3 Lakh Crore Digital Business In FY16
+INFO    2016-06-19 22:47:39,925  - info - [STEP:] News Item is - ,      [DETAILS:] Good monsoon to push GDP growth to 8% in FY17: Shaktikanta Das
+INFO    2016-06-19 22:47:40,054  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:40,240  - info - [STEP:] News Item is - ,      [DETAILS:] Will not cut govt stake in power PSUs below 51%: Piyush Goyal
+INFO    2016-06-19 22:47:40,375  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:40,503  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:40,648  - info - [STEP:] News Item is - ,      [DETAILS:] Father's Day: Tech firms release heart-warming messages, apps
+INFO    2016-06-19 22:47:40,752  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:40,867  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:41,024  - info - [STEP:] News Item is - ,      [DETAILS:] Father's Day: Haaptik's Baap Bot will remind you of your dad, here's why
+INFO    2016-06-19 22:47:41,125  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:41,230  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:41,364  - info - [STEP:] News Item is - ,      [DETAILS:] 68% of Nifty 50 companies are vulnerable to cyber attacks:Study
+INFO    2016-06-19 22:47:41,506  - info - [STEP:] News Item is - ,      [DETAILS:] Rolls-Royce shows off self-driving car with silk sofa, AI-assistant for chauffeur
+INFO    2016-06-19 22:47:41,609  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:41,711  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:41,867  - info - [STEP:] News Item is - ,      [DETAILS:] Children's films treated with respect in West, says Nagesh Kukunoor
+INFO    2016-06-19 22:47:41,976  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:42,117  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:42,316  - info - [STEP:] News Item is - ,      [DETAILS:] 1/61Spoiler alert: Shah Rukh Khan reveals his roles from upcoming films
+INFO    2016-06-19 22:47:42,473  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:42,627  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:42,845  - info - [STEP:] News Item is - ,      [DETAILS:] Salman Khan fears losing stardom
+INFO    2016-06-19 22:47:43,000  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:43,158  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:43,591  - info - [STEP:] News Item is - ,      [DETAILS:] Navya Naveli and many more celeb kids attend Aryan Khan's graduation bash
+INFO    2016-06-19 22:47:43,704  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:43,818  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:43,997  - info - [STEP:] News Item is - ,      [DETAILS:] 2016 Rio Olympics: Union sports minister wish Indian contingent luck, hopes for double-digit medal tally
+INFO    2016-06-19 22:47:44,144  - info - [STEP:] News Item is - ,      [DETAILS:] Photos: India's Ishant Sharma gets engaged to Pratima Singh
+INFO    2016-06-19 22:47:44,257  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:44,372  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:44,534  - info - [STEP:] News Item is - ,      [DETAILS:] Shaminda Eranga hospitalised with heart ailment
+INFO    2016-06-19 22:47:44,648  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:44,753  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:44,858  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:44,992  - info - [STEP:] News Item is - ,      [DETAILS:] Rosberg stops rot in Baku as Hamilton struggles
+INFO    2016-06-19 22:47:45,128  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:45,233  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:45,336  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:45,456  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:45,582  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:45,731  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:45,944  - info - [STEP:] News Item is - ,      [DETAILS:] Pizza and cold beer: British astronaut's wishlist after 6 months in space
+INFO    2016-06-19 22:47:46,093  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:46,215  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:46,375  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:46,548  - info - [STEP:] News Item is - ,      [DETAILS:] World's first 1000-processor microchip created in US varsity
+INFO    2016-06-19 22:47:46,666  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:46,779  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:46,930  - info - [STEP:] News Item is - ,      [DETAILS:] Nepal's quake-hit village Langtang gets tribute on Mars!
+INFO    2016-06-19 22:47:47,044  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:47,149  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:47,308  - info - [STEP:] News Item is - ,      [DETAILS:] Indian-origin researcher leads development of phone-based eye-tracking system
+INFO    2016-06-19 22:47:47,415  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:47,526  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:47,679  - info - [STEP:] News Item is - ,      [DETAILS:] Plant-Based Diet May Lower Risk Of Type 2 Diabetes
+INFO    2016-06-19 22:47:47,781  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:47,885  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:48,022  - info - [STEP:] News Item is - ,      [DETAILS:] Obesity In Women Affects At Least 3 Generations
+INFO    2016-06-19 22:47:48,123  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:48,229  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:48,382  - info - [STEP:] News Item is - ,      [DETAILS:] Single moms at greater risk of heart disease
+INFO    2016-06-19 22:47:48,490  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:48,624  - info - [STEP:] News Item is - ,      [DETAILS:] 1.7 lakh kids live near polio risk zone in Telangana
+INFO    2016-06-19 22:47:48,730  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:48,841  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:47:51,335  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5ee2b6f9]
+INFO    2016-06-19 22:47:51,335  - TEST_DATA_ROW {4}   , TEST_CASE {Mod_01_TC_01}, ITERATION {2}
+INFO    2016-06-19 22:47:51,335  - Child Test started [Iteration [2] .......QuitApp]
+INFO    2016-06-19 22:47:53,409  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-19 22:47:53,409  - Child test appended [com.relevantcodes.extentreports.ExtentTest@58fb7731]
+INFO    2016-06-19 22:47:53,409  - ITERATION COMPLETED [2] 
+INFO    2016-06-19 22:47:53,409  - TEST CASE EXECUTION COMPLETED [Mod_01_TC_01]
+INFO    2016-06-19 22:47:53,409  - ------------------------------------------------------------------
+INFO    2016-06-19 22:47:53,412  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@3a1dd365
+INFO    2016-06-19 22:47:53,413  - Extent reporter test started [Mod_01_TC_05]  Disscription [Description - Mod_01_TC_05]
+INFO    2016-06-19 22:47:53,413  - Authour Assigned
+INFO    2016-06-19 22:47:53,413  - Moudle is assigne Mod_01
+INFO    2016-06-19 22:47:53,413  - TEST CASE under Execution [Mod_01_TC_05]
+INFO    2016-06-19 22:47:53,413  - ITERATION MODE: [Run all iterations]
+INFO    2016-06-19 22:47:53,414  - Test Data Row is Pointing at {13} ,TESTCASE {Mod_01_TC_05} , ITERATION {1}
+INFO    2016-06-19 22:47:53,414  - ITERATION STARTED [1]
+INFO    2016-06-19 22:47:53,414  - TEST_DATA_ROW {13}   , TEST_CASE {Mod_01_TC_05}, ITERATION {1}
+INFO    2016-06-19 22:47:53,414  - Child Test started [Iteration [1] .......LaunchBrowser]
+INFO    2016-06-19 22:47:53,415  - get_TestData (Browser_Name) discovered at col: 3
+INFO    2016-06-19 22:47:53,415  - {Browser_Name} (CommonData) Value: Chrome
+INFO    2016-06-19 22:47:55,373  - Chrome Browser launched
+INFO    2016-06-19 22:47:55,373  - info - [STEP:] Launch Browser,      [DETAILS:] Chrome is launched with all desired capabilities
+INFO    2016-06-19 22:47:55,375  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6c5945a7]
+INFO    2016-06-19 22:47:55,376  - TEST_DATA_ROW {13}   , TEST_CASE {Mod_01_TC_05}, ITERATION {1}
+INFO    2016-06-19 22:47:55,376  - Child Test started [Iteration [1] .......dummyOne]
+INFO    2016-06-19 22:47:55,694  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:47:55,694  - Child test appended [com.relevantcodes.extentreports.ExtentTest@640f11a1]
+INFO    2016-06-19 22:47:55,694  - Master test data Row 13
+INFO    2016-06-19 22:47:55,694  - TEST_DATA_ROW {13}   , TEST_CASE {Mod_01_TC_05}, ITERATION {1}, SUBITERATION {1}
+INFO    2016-06-19 22:47:55,694  - Child Test started [Iteration [1] .......dummyTwo]
+ERROR   2016-06-19 22:47:55,833  - [STEP:] Test step,      [DETAILS:] Log fatel<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_47_55_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_47_55_IST_2016.png' />
+INFO    2016-06-19 22:47:55,969  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:47:55,969  - Child test appended [com.relevantcodes.extentreports.ExtentTest@78365cfa]
+INFO    2016-06-19 22:47:55,969  - Master test data Row 14
+INFO    2016-06-19 22:47:55,969  - TEST_DATA_ROW {14}   , TEST_CASE {Mod_01_TC_05}, ITERATION {1}, SUBITERATION {2}
+INFO    2016-06-19 22:47:55,969  - Child Test started [Iteration [1] .......dummyTwo]
+ERROR   2016-06-19 22:47:56,128  - [STEP:] Test step,      [DETAILS:] Log fatel<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_47_55_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_47_55_IST_2016.png' />
+INFO    2016-06-19 22:47:56,268  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:47:56,268  - Child test appended [com.relevantcodes.extentreports.ExtentTest@52de51b6]
+INFO    2016-06-19 22:47:56,268  - Master test data Row 15
+INFO    2016-06-19 22:47:56,268  - TEST_DATA_ROW {15}   , TEST_CASE {Mod_01_TC_05}, ITERATION {1}, SUBITERATION {3}
+INFO    2016-06-19 22:47:56,268  - Child Test started [Iteration [1] .......dummyTwo]
+ERROR   2016-06-19 22:47:56,413  - [STEP:] Test step,      [DETAILS:] Log fatel<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_47_56_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_47_56_IST_2016.png' />
+INFO    2016-06-19 22:47:56,559  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:47:56,559  - Child test appended [com.relevantcodes.extentreports.ExtentTest@68ad99fe]
+INFO    2016-06-19 22:47:56,559  - TEST_DATA_ROW {13}   , TEST_CASE {Mod_01_TC_05}, ITERATION {1}
+INFO    2016-06-19 22:47:56,559  - Child Test started [Iteration [1] .......dummyThree]
+INFO    2016-06-19 22:47:56,835  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:47:56,835  - Child test appended [com.relevantcodes.extentreports.ExtentTest@2a79d4b1]
+INFO    2016-06-19 22:47:56,835  - TEST_DATA_ROW {13}   , TEST_CASE {Mod_01_TC_05}, ITERATION {1}
+INFO    2016-06-19 22:47:56,835  - Child Test started [Iteration [1] .......QuitApp]
+INFO    2016-06-19 22:47:58,216  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-19 22:47:58,216  - Child test appended [com.relevantcodes.extentreports.ExtentTest@1755e85b]
+INFO    2016-06-19 22:47:58,216  - ITERATION COMPLETED [1] 
+INFO    2016-06-19 22:47:58,216  - Test Data Row is Pointing at {16} ,TESTCASE {Mod_01_TC_05} , ITERATION {2}
+INFO    2016-06-19 22:47:58,216  - ITERATION STARTED [2]
+INFO    2016-06-19 22:47:58,217  - TEST_DATA_ROW {16}   , TEST_CASE {Mod_01_TC_05}, ITERATION {2}
+INFO    2016-06-19 22:47:58,217  - Child Test started [Iteration [2] .......LaunchBrowser]
+INFO    2016-06-19 22:47:58,217  - get_TestData (Browser_Name) discovered at col: 3
+INFO    2016-06-19 22:47:58,217  - {Browser_Name} (CommonData) Value: Chrome
+INFO    2016-06-19 22:48:00,276  - Chrome Browser launched
+INFO    2016-06-19 22:48:00,276  - info - [STEP:] Launch Browser,      [DETAILS:] Chrome is launched with all desired capabilities
+INFO    2016-06-19 22:48:00,281  - Child test appended [com.relevantcodes.extentreports.ExtentTest@14dda234]
+INFO    2016-06-19 22:48:00,282  - TEST_DATA_ROW {16}   , TEST_CASE {Mod_01_TC_05}, ITERATION {2}
+INFO    2016-06-19 22:48:00,282  - Child Test started [Iteration [2] .......dummyOne]
+INFO    2016-06-19 22:48:00,584  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:48:00,584  - Child test appended [com.relevantcodes.extentreports.ExtentTest@74a6a609]
+INFO    2016-06-19 22:48:00,584  - Master test data Row 16
+INFO    2016-06-19 22:48:00,584  - TEST_DATA_ROW {16}   , TEST_CASE {Mod_01_TC_05}, ITERATION {2}, SUBITERATION {1}
+INFO    2016-06-19 22:48:00,584  - Child Test started [Iteration [2] .......dummyTwo]
+ERROR   2016-06-19 22:48:00,745  - [STEP:] Test step,      [DETAILS:] Log fatel<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_48_00_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_48_00_IST_2016.png' />
+INFO    2016-06-19 22:48:00,902  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:48:00,903  - Child test appended [com.relevantcodes.extentreports.ExtentTest@54d18072]
+INFO    2016-06-19 22:48:00,903  - Master test data Row 17
+INFO    2016-06-19 22:48:00,903  - TEST_DATA_ROW {17}   , TEST_CASE {Mod_01_TC_05}, ITERATION {2}, SUBITERATION {2}
+INFO    2016-06-19 22:48:00,903  - Child Test started [Iteration [2] .......dummyTwo]
+ERROR   2016-06-19 22:48:01,054  - [STEP:] Test step,      [DETAILS:] Log fatel<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_48_00_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_48_00_IST_2016.png' />
+INFO    2016-06-19 22:48:01,198  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:48:01,198  - Child test appended [com.relevantcodes.extentreports.ExtentTest@424fd310]
+INFO    2016-06-19 22:48:01,198  - Master test data Row 18
+INFO    2016-06-19 22:48:01,198  - TEST_DATA_ROW {18}   , TEST_CASE {Mod_01_TC_05}, ITERATION {2}, SUBITERATION {3}
+INFO    2016-06-19 22:48:01,198  - Child Test started [Iteration [2] .......dummyTwo]
+ERROR   2016-06-19 22:48:01,339  - [STEP:] Test step,      [DETAILS:] Log fatel<img class='report-img' data-featherlight='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_48_01_IST_2016.png' src='file:///C:\Users\Brijendra Singh\Documents\GitHub\BPS Hybrid Framework\Results\Run_Sun_Jun_19_22_45_53_IST_2016\Screenshots\Sun_Jun_19_22_48_01_IST_2016.png' />
+INFO    2016-06-19 22:48:01,472  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:48:01,472  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5286c33a]
+INFO    2016-06-19 22:48:01,472  - TEST_DATA_ROW {16}   , TEST_CASE {Mod_01_TC_05}, ITERATION {2}
+INFO    2016-06-19 22:48:01,472  - Child Test started [Iteration [2] .......dummyThree]
+INFO    2016-06-19 22:48:01,741  - warning - [STEP:] Test Step ,      [DETAILS:] Log warning
+INFO    2016-06-19 22:48:01,741  - Child test appended [com.relevantcodes.extentreports.ExtentTest@6c25e6c4]
+INFO    2016-06-19 22:48:01,741  - TEST_DATA_ROW {16}   , TEST_CASE {Mod_01_TC_05}, ITERATION {2}
+INFO    2016-06-19 22:48:01,741  - Child Test started [Iteration [2] .......QuitApp]
+INFO    2016-06-19 22:48:03,138  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-19 22:48:03,139  - Child test appended [com.relevantcodes.extentreports.ExtentTest@48a12036]
+INFO    2016-06-19 22:48:03,139  - ITERATION COMPLETED [2] 
+WARN    2016-06-19 22:48:03,140  - ITERATION COMPLETED - NO TEST DATA ROW AVAILABLE
+INFO    2016-06-19 22:48:03,140  - TEST CASE EXECUTION COMPLETED [Mod_01_TC_05]
+INFO    2016-06-19 22:48:03,140  - ------------------------------------------------------------------
+INFO    2016-06-19 22:48:03,140  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@bf1ec20
+INFO    2016-06-19 22:48:03,141  - @@Module {Mod_01} Execution Completed
+INFO    2016-06-19 22:48:03,141  - 
+INFO    2016-06-19 22:48:03,141  - MODULE UNDER EXECUTION [Mod_02]
+INFO    2016-06-19 22:48:03,141  - Extent reporter test started [Mod_02_TC_02]  Disscription [Description - Mod_02_TC_02]
+INFO    2016-06-19 22:48:03,141  - Authour Assigned
+INFO    2016-06-19 22:48:03,141  - Moudle is assigne Mod_02
+INFO    2016-06-19 22:48:03,141  - TEST CASE under Execution [Mod_02_TC_02]
+INFO    2016-06-19 22:48:03,141  - ITERATION MODE: [Run from <Start Iteration> to <End Iteration>]
+INFO    2016-06-19 22:48:03,142  - Start_Iteration [1]  !! End_Iterattion [1]
+INFO    2016-06-19 22:48:03,143  - Test Data Row is Pointing at {10} ,TESTCASE {Mod_02_TC_02} , ITERATION {1}
+INFO    2016-06-19 22:48:03,143  - ITERATION STARTED [1]
+INFO    2016-06-19 22:48:03,143  - TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-19 22:48:03,143  - Child Test started [Iteration [1] .......LaunchBrowser]
+INFO    2016-06-19 22:48:03,144  - get_TestData (Browser_Name) discovered at col: 3
+INFO    2016-06-19 22:48:03,144  - {Browser_Name} (CommonData) Value: Chrome
+INFO    2016-06-19 22:48:05,306  - Chrome Browser launched
+INFO    2016-06-19 22:48:05,306  - info - [STEP:] Launch Browser,      [DETAILS:] Chrome is launched with all desired capabilities
+INFO    2016-06-19 22:48:05,308  - Child test appended [com.relevantcodes.extentreports.ExtentTest@4e70a728]
+INFO    2016-06-19 22:48:05,309  - TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-19 22:48:05,309  - Child Test started [Iteration [1] .......LaunchApp]
+INFO    2016-06-19 22:48:05,309  - get_TestData (App_URL) discovered at col: 4
+INFO    2016-06-19 22:48:05,309  - {App_URL} (CommonData) Value: https://www.google.co.in/
+INFO    2016-06-19 22:48:08,545  - Child test appended [com.relevantcodes.extentreports.ExtentTest@1c3146bc]
+INFO    2016-06-19 22:48:08,546  - Master test data Row 10
+INFO    2016-06-19 22:48:08,546  - TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {1}
+INFO    2016-06-19 22:48:08,546  - Child Test started [Iteration [1] .......SelectGapp]
+INFO    2016-06-19 22:48:08,546  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:48:08,546  - {AppName} Value: Play
+INFO    2016-06-19 22:48:08,547  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:48:08,547  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:48:14,496  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5d1659ea]
+INFO    2016-06-19 22:48:14,497  - Master test data Row 11
+INFO    2016-06-19 22:48:14,497  - TEST_DATA_ROW {11}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {2}
+INFO    2016-06-19 22:48:14,497  - Child Test started [Iteration [1] .......SelectGapp]
+INFO    2016-06-19 22:48:14,497  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:48:14,497  - {AppName} Value: Search
+INFO    2016-06-19 22:48:14,497  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:48:14,497  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:48:16,277  - Child test appended [com.relevantcodes.extentreports.ExtentTest@4409e975]
+INFO    2016-06-19 22:48:16,277  - Master test data Row 12
+INFO    2016-06-19 22:48:16,277  - TEST_DATA_ROW {12}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}, SUBITERATION {3}
+INFO    2016-06-19 22:48:16,277  - Child Test started [Iteration [1] .......SelectGapp]
+INFO    2016-06-19 22:48:16,277  - get_TestData (AppName) discovered at col: 5
+INFO    2016-06-19 22:48:16,278  - {AppName} Value: News
+INFO    2016-06-19 22:48:16,278  - get_TestData (AppNameIndex) discovered at col: 6
+INFO    2016-06-19 22:48:16,278  - {AppNameIndex} Value: 
+INFO    2016-06-19 22:48:20,966  - Child test appended [com.relevantcodes.extentreports.ExtentTest@3542162a]
+INFO    2016-06-19 22:48:20,966  - TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-19 22:48:20,966  - Child Test started [Iteration [1] .......print_news]
+INFO    2016-06-19 22:48:21,318  - info - [STEP:] News Item is - ,      [DETAILS:] 39 Indians kidnapped by ISIS in Iraq are alive: Sushma Swaraj
+INFO    2016-06-19 22:48:21,870  - info - [STEP:] News Item is - ,      [DETAILS:] India playing role in shaping global agenda, says Sushma Swaraj
+INFO    2016-06-19 22:48:22,138  - info - [STEP:] News Item is - ,      [DETAILS:] India Received $55 Billion In FDI In 2 Years, Says Sushma Swaraj
+INFO    2016-06-19 22:48:22,447  - info - [STEP:] News Item is - ,      [DETAILS:] India needs to recaliberate NSG stance ahead of Seoul meeting (Comment: Special to IANS)
+INFO    2016-06-19 22:48:22,751  - info - [STEP:] News Item is - ,      [DETAILS:] China is not opposed to India's NSG bid, we will convince Beijing: Sushma Swaraj
+INFO    2016-06-19 22:48:22,869  - info - [STEP:] News Item is - ,      [DETAILS:] Raghuram Rajan felt undermined in weeks before quitting: Reports
+INFO    2016-06-19 22:48:22,978  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,064  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,150  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,219  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,307  - info - [STEP:] News Item is - ,      [DETAILS:] Vijay Mallya not on invitee list of Indian High Commission in UK: MEA
+INFO    2016-06-19 22:48:23,386  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,481  - info - [STEP:] News Item is - ,      [DETAILS:] No Indian cricketer involved in alleged rape in Zimbabwe
+INFO    2016-06-19 22:48:23,553  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,625  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,696  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,767  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,839  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:23,910  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,003  - info - [STEP:] News Item is - ,      [DETAILS:] Donald Trump says US should start thinking about racial profiling
+INFO    2016-06-19 22:48:24,079  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,173  - info - [STEP:] News Item is - ,      [DETAILS:] PMO gets complaint: Essar allegedly tapped Ambani brothers, Suresh Prabhu, Vajpayee PMO staff
+INFO    2016-06-19 22:48:24,267  - info - [STEP:] News Item is - ,      [DETAILS:] Tasmac orders closure of 500 liquor shops
+INFO    2016-06-19 22:48:24,341  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,414  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,504  - info - [STEP:] News Item is - ,      [DETAILS:] Karnataka CM rejigs ministry
+INFO    2016-06-19 22:48:24,575  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,648  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,719  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,810  - info - [STEP:] News Item is - ,      [DETAILS:] Nitish Kumar says yoga irrelevant without country-wide liquor ban, urges PM Modi to act
+INFO    2016-06-19 22:48:24,881  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:24,955  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,049  - info - [STEP:] News Item is - ,      [DETAILS:] Arun Jaitley Attacks Amarinder Singh Over His Family's Alleged Foreign Accounts
+INFO    2016-06-19 22:48:25,122  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,196  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,272  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,369  - info - [STEP:] News Item is - ,      [DETAILS:] What's behind Britain's wrangling with the EU?
+INFO    2016-06-19 22:48:25,445  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,535  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,608  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,680  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,752  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,843  - info - [STEP:] News Item is - ,      [DETAILS:] Indonesia: Floods, landslides kill 35 in Central Java
+INFO    2016-06-19 22:48:25,918  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:25,994  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,070  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,165  - info - [STEP:] News Item is - ,      [DETAILS:] China Condemns Indonesia's Firing On Chinese Boats In South China Sea
+INFO    2016-06-19 22:48:26,241  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,326  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,401  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,474  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,550  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,641  - info - [STEP:] News Item is - ,      [DETAILS:] Egyptian Court Sentences 2 Al-Jazeera Employees To Death
+INFO    2016-06-19 22:48:26,715  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,789  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,865  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:26,938  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:27,036  - info - [STEP:] News Item is - ,      [DETAILS:] SpiceJet to soon offer taxi to airport option with ticket
+INFO    2016-06-19 22:48:27,112  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:27,208  - info - [STEP:] News Item is - ,      [DETAILS:] ICICI Bank Attracts Rs. 3 Lakh Crore Digital Business In FY16
+INFO    2016-06-19 22:48:27,301  - info - [STEP:] News Item is - ,      [DETAILS:] Good monsoon to push GDP growth to 8% in FY17: Shaktikanta Das
+INFO    2016-06-19 22:48:27,375  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:27,466  - info - [STEP:] News Item is - ,      [DETAILS:] Will not cut govt stake in power PSUs below 51%: Piyush Goyal
+INFO    2016-06-19 22:48:27,541  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:27,615  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:27,713  - info - [STEP:] News Item is - ,      [DETAILS:] Father's Day: Tech firms release heart-warming messages, apps
+INFO    2016-06-19 22:48:27,787  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:27,863  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:27,955  - info - [STEP:] News Item is - ,      [DETAILS:] Father's Day: Haaptik's Baap Bot will remind you of your dad, here's why
+INFO    2016-06-19 22:48:28,046  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:28,122  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:28,218  - info - [STEP:] News Item is - ,      [DETAILS:] 68% of Nifty 50 companies are vulnerable to cyber attacks:Study
+INFO    2016-06-19 22:48:28,310  - info - [STEP:] News Item is - ,      [DETAILS:] Rolls-Royce shows off self-driving car with silk sofa, AI-assistant for chauffeur
+INFO    2016-06-19 22:48:28,384  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:28,459  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:28,552  - info - [STEP:] News Item is - ,      [DETAILS:] Children's films treated with respect in West, says Nagesh Kukunoor
+INFO    2016-06-19 22:48:28,627  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:28,702  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:28,795  - info - [STEP:] News Item is - ,      [DETAILS:] 1/61Spoiler alert: Shah Rukh Khan reveals his roles from upcoming films
+INFO    2016-06-19 22:48:28,870  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:28,944  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:29,040  - info - [STEP:] News Item is - ,      [DETAILS:] Salman Khan fears losing stardom
+INFO    2016-06-19 22:48:29,118  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:29,203  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:29,297  - info - [STEP:] News Item is - ,      [DETAILS:] Navya Naveli and many more celeb kids attend Aryan Khan's graduation bash
+INFO    2016-06-19 22:48:29,373  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:29,447  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:29,540  - info - [STEP:] News Item is - ,      [DETAILS:] 2016 Rio Olympics: Union sports minister wish Indian contingent luck, hopes for double-digit medal tally
+INFO    2016-06-19 22:48:29,631  - info - [STEP:] News Item is - ,      [DETAILS:] Photos: India's Ishant Sharma gets engaged to Pratima Singh
+INFO    2016-06-19 22:48:29,707  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:29,782  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:29,874  - info - [STEP:] News Item is - ,      [DETAILS:] Shaminda Eranga hospitalised with heart ailment
+INFO    2016-06-19 22:48:29,951  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,032  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,114  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,211  - info - [STEP:] News Item is - ,      [DETAILS:] Rosberg stops rot in Baku as Hamilton struggles
+INFO    2016-06-19 22:48:30,288  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,363  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,440  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,533  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,689  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,758  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,852  - info - [STEP:] News Item is - ,      [DETAILS:] Pizza and cold beer: British astronaut's wishlist after 6 months in space
+INFO    2016-06-19 22:48:30,924  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:30,997  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,068  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,159  - info - [STEP:] News Item is - ,      [DETAILS:] World's first 1000-processor microchip created in US varsity
+INFO    2016-06-19 22:48:31,231  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,302  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,390  - info - [STEP:] News Item is - ,      [DETAILS:] Nepal's quake-hit village Langtang gets tribute on Mars!
+INFO    2016-06-19 22:48:31,465  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,537  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,625  - info - [STEP:] News Item is - ,      [DETAILS:] Indian-origin researcher leads development of phone-based eye-tracking system
+INFO    2016-06-19 22:48:31,694  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,764  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,851  - info - [STEP:] News Item is - ,      [DETAILS:] Plant-Based Diet May Lower Risk Of Type 2 Diabetes
+INFO    2016-06-19 22:48:31,921  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:31,994  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:32,085  - info - [STEP:] News Item is - ,      [DETAILS:] Obesity In Women Affects At Least 3 Generations
+INFO    2016-06-19 22:48:32,159  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:32,233  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:32,324  - info - [STEP:] News Item is - ,      [DETAILS:] Single moms at greater risk of heart disease
+INFO    2016-06-19 22:48:32,396  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:32,483  - info - [STEP:] News Item is - ,      [DETAILS:] 1.7 lakh kids live near polio risk zone in Telangana
+INFO    2016-06-19 22:48:32,558  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:32,629  - info - [STEP:] News Item is - ,      [DETAILS:] 
+INFO    2016-06-19 22:48:32,877  - Child test appended [com.relevantcodes.extentreports.ExtentTest@5316e95f]
+INFO    2016-06-19 22:48:32,877  - TEST_DATA_ROW {10}   , TEST_CASE {Mod_02_TC_02}, ITERATION {1}
+INFO    2016-06-19 22:48:32,877  - Child Test started [Iteration [1] .......QuitApp]
+INFO    2016-06-19 22:48:34,422  - info - [STEP:] Close Browser,      [DETAILS:] Done
+INFO    2016-06-19 22:48:34,423  - Child test appended [com.relevantcodes.extentreports.ExtentTest@618c5d94]
+INFO    2016-06-19 22:48:34,423  - ITERATION COMPLETED [1] 
+INFO    2016-06-19 22:48:34,423  - TEST CASE EXECUTION COMPLETED [Mod_02_TC_02]
+INFO    2016-06-19 22:48:34,423  - ------------------------------------------------------------------
+INFO    2016-06-19 22:48:34,423  - Test Ended !!com.relevantcodes.extentreports.ExtentTest@5b40ceb
+INFO    2016-06-19 22:48:34,423  - @@Module {Mod_02} Execution Completed
+INFO    2016-06-19 22:48:35,169  - Report FLUSHED !!!!
+INFO    2016-06-19 22:48:35,169  - %%%%%%%%%%%%%     All applicable Modules are executed       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

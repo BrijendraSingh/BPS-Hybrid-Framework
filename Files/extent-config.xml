@@ -14,13 +14,13 @@
 		<protocol>https://</protocol>
 		
         <!-- title of the document -->
-        <documentTitle>Execution Report @Brij(a69667) </documentTitle>
+        <documentTitle>Execution Report @Brij(a69667)</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>Enter Project Name Here: </reportName>
+        <reportName>BPS Hybrid Framework Selenium Automation Project</reportName>
         
         <!-- report headline - displayed at top-nav, after reportHeadline -->
-        <reportHeadline>Regression Execution Report</reportHeadline>
+        <reportHeadline>Selenium Regression Execution Report</reportHeadline>
         
         <!-- global date format override -->
         <!-- defaults to yyyy-MM-dd -->

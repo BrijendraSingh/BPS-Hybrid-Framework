@@ -53,6 +53,7 @@ public class GoogleHomePage {
 		if (gAppIcons.size()>0){
 			for (int i=0;i<gAppIcons.size();i++){
 				if (gAppIcons.get(i).getText().equalsIgnoreCase(AppName)){
+					wait.until(ExpectedConditions.elementToBeClickable(gAppIcons.get(i)));
 					gAppIcons.get(i).click();
 					RetVAL=1;
 					Reporter.logPASS("Google Application Selected", AppName);

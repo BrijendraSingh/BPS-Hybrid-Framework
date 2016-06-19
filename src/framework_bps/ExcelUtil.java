@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
@@ -30,7 +31,7 @@ public class ExcelUtil {
 	
 	static String testCaseName, iterationMode, strCurrentKeyword, strTestCaseDescription;
 	static Sheet currentSheet, dataSheet;
-	static int sheet_rowCount,IterationStartRow_TestData,IterationCrntRow_TestData,subIterationRow_TestData ,startIteration, endIteration, currentIteration, intSubIterations, keywordCount, runSubiterationCount, intMasterTDRow;
+	static int sheet_rowCount,IterationStartRow_TestData,IterationCrntRow_TestData,subIterationRow_TestData ,startIteration, endIteration, currentIteration, intSubIterations, keywordCount, runSubiterationCount, intMasterTDRow,intBPSsubIteration;
 	static Row keywordRow, dataRow;
 	static String[] arrCurrentFlowData;
 	static List<String> groupedKeywords;
@@ -39,7 +40,7 @@ public class ExcelUtil {
 	static Sheet main, currentSheet_key, currentSheet_Data;
 	static String currentSheetName;
 	static WebDriver driver;
-	static ExtentTest ChildTest;
+	static ExtentTest ChildTest,IterationTest;
 	static Keywords B_lib;
 	static String ResultFolder;
 
@@ -136,8 +137,9 @@ public class ExcelUtil {
 				}
 			}
 			
-			LogFW.log(" ITERATION STARTED [" + currentIteration + "]");
-
+			LogFW.log("ITERATION STARTED [" + currentIteration + "]");
+			//IterationTest = Reporter.StartIteration_ReporterTest("Iteration " + Integer.toString(currentIteration));
+			//ChildTest = Reporter.StartChild_ReporterTest("Iteration " + Integer.toString(currentIteration));
 			//run loop for available keywords
 			keywordCount=keywordRow.getLastCellNum()-6;
 			
@@ -147,7 +149,7 @@ public class ExcelUtil {
 				if (!keywordRow.getCell(k).toString().isEmpty()){					
 					arrCurrentFlowData = keywordRow.getCell(k).toString().split(",");
 					strCurrentKeyword=arrCurrentFlowData[0];
-						
+					//intBPSsubIteration=0;
 						//NO SUB ITERATION KEYWORD , without [,]
 						if (arrCurrentFlowData.length==1){
 							intSubIterations=1;
@@ -155,7 +157,7 @@ public class ExcelUtil {
 							intMasterTDRow=IterationCrntRow_TestData;
 							
 							//LogFW.log("Master test data Row " + intMasterTDRow);
-							LogFW.log("!1 -TEST_DATA_ROW {" + IterationCrntRow_TestData + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration +"}"  );
+							LogFW.log("TEST_DATA_ROW {" + IterationCrntRow_TestData + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration +"}"  );
 					
 							//EXECUTION OF NON SUB ITERATION KEYWORDS
 							for (String subg: groupedKeywords){
@@ -183,14 +185,15 @@ public class ExcelUtil {
 									intMasterTDRow=subIt;
 									
 									LogFW.log("Master test data Row " + intMasterTDRow);
-									LogFW.log("!2 -TEST_DATA_ROW {" + subIt + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration + "}, SUBITERATION {" + groupIndex +"}" );
-								
+									LogFW.log("TEST_DATA_ROW {" + subIt + "}   , TEST_CASE {" + testCaseName + "}, ITERATION {" + currentIteration + "}, SUBITERATION {" + groupIndex +"}" );
+									intBPSsubIteration = groupIndex;
 									for (String subg: groupedKeywords){
 										//LogFW.log(subg);
 										executeKeyword(subg);
 									}
 									groupIndex=groupIndex+1;
 								}
+								//intBPSsubIteration=0;
 								groupedKeywords.clear();
 								//LogFW.log("------------------------------------------------------------------");
 							}
@@ -200,6 +203,8 @@ public class ExcelUtil {
 						break;
 					}
 				}
+			//Reporter.Append_IterationTest(ChildTest);
+			//Reporter.Append_ChildTest(ChildTest);
 			LogFW.log("ITERATION COMPLETED [" + currentIteration + "] ");
 			//LogFW.log("------------------------------------------------------------------");
 			currentIteration=currentIteration+1;  			
@@ -279,8 +284,8 @@ public class ExcelUtil {
 	
 	public static void executeKeyword(String keyword){
 		//@@ Child test started
-		ChildTest = Reporter.StartChiled_ReporterTest(keyword);
-		//LogFW.warning("TRIGGER ["+keyword + "] ");
+		ChildTest = Reporter.StartChild_ReporterTest("Iteration [" + currentIteration + "] ......." + keyword);
+
 		
 		//@@ check for launch browser to setup the browser and pass the driver
 		if (keyword.equalsIgnoreCase("LaunchBrowser")){
@@ -410,11 +415,38 @@ public class ExcelUtil {
 	}
 	
 	public static void launchResult(){
-		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\Drivers\\IEDriverServer.exe");
-		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-		WebDriver driver1 = new InternetExplorerDriver(cap);
+		String ResultLauncher;
+		DesiredCapabilities cap;
+		WebDriver driver1;
+		ResultLauncher= FW_Config.config.getProperty("LaunchResultInBrowser");
 		
+		switch (ResultLauncher){
+			case "Chrome":
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+				driver1 = new ChromeDriver();
+				break;
+			case "IE":
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\Drivers\\IEDriverServer.exe");
+				cap = new DesiredCapabilities();
+				cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+				driver1 = new InternetExplorerDriver(cap);
+				break;
+			case "Mozila":
+				String FF_Profile = FW_Config.config.getProperty("Firfox_Profile");
+				ProfilesIni profile = new ProfilesIni();
+				FirefoxProfile ffprofile = profile.getProfile(FF_Profile);
+				
+				cap = new DesiredCapabilities();
+				cap.setCapability(FirefoxDriver.PROFILE, ffprofile);			
+				driver1 = new FirefoxDriver(cap);
+				break;
+			default:
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\Drivers\\IEDriverServer.exe");
+				cap = new DesiredCapabilities();
+				cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+				driver1 = new InternetExplorerDriver(cap);
+				break;
+		}	
 		ResultFolder = Reporter.ResultFolderName;
 		driver1.get(System.getProperty("user.dir")+"\\Results\\Run_"+ResultFolder+"\\Report.html");
 	}

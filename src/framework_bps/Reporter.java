@@ -30,7 +30,7 @@ import businessComponents.Keywords;
 public class Reporter {
 	
 	static ExtentReports extent;
-	static ExtentTest test,ChildTest;
+	static ExtentTest test,ChildTest,IterationTest;
 	static Date date;
 	static String ResultFolderName;
 	static WebDriver driver;
@@ -77,18 +77,19 @@ public class Reporter {
 		//test.setDescription(TestDescription);
 	}
 	
-	/** StartChiled_ReporterTest
+	/** StartChild_ReporterTest
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
 	 * @Date  : May 03, 2016 
 	 * @Discription: StartChiled_ReporterTest, Start the Child test for Keyword level
 	 * -----------------------------------------------------------------------------------------------------
 	 */
-	public static ExtentTest StartChiled_ReporterTest(String testName){
+	public static ExtentTest StartChild_ReporterTest(String testName){
 		ChildTest=null;
 		LogFW.log("Child Test started [" + testName + "]" );
 		return ChildTest = extent.startTest(testName);	
 	}
+	
 	
 	/** Append_ChildTest
 	 * ----------------------------------------------------------------------------------------------------
@@ -99,10 +100,36 @@ public class Reporter {
 	 */
 	public static void Append_ChildTest(ExtentTest ChildTest){
 		test.appendChild(ChildTest);
+		//IterationTest.appendChild(ChildTest);
 		LogFW.log("Child test appended [" + ChildTest.toString() + "]");
 	}
 	
 	
+	/** StartIteration_ReporterTest
+	 * ----------------------------------------------------------------------------------------------------
+	 * @author: Brijendra Singh
+	 * @Date  : May 03, 2016 
+	 * @Discription: StartIteration_ReporterTest, Start the Iteration test for Keyword level
+	 * -----------------------------------------------------------------------------------------------------
+	 */
+	public static ExtentTest StartIteration_ReporterTest(String testName){
+		IterationTest=null;
+		LogFW.log("Iteration Test started [" + testName + "]" );
+		return IterationTest = extent.startTest(testName);	
+	}
+	
+	
+	/** Append_ChildTest
+	 * ----------------------------------------------------------------------------------------------------
+	 * @author: Brijendra Singh
+	 * @Date  : May 03, 2016 
+	 * @Discription: Append_ChildTest, Start the Child test for Keyword level
+	 * -----------------------------------------------------------------------------------------------------
+	 */
+	public static void Append_IterationTest(ExtentTest ChildTest){
+		test.appendChild(ChildTest);
+		LogFW.log("Iteration test appended [" + ChildTest.toString() + "]");
+	}
 	/** flushReporter
 	 * ----------------------------------------------------------------------------------------------------
 	 * @author: Brijendra Singh
